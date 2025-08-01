@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lbef | Health & Wellness Community</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=P极客时间oppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -19,12 +19,12 @@
                     
                     <!-- Educational Content Dropdown -->
                     <li class="dropdown">
-                        <a href="#"><i class="fas fa-book"></i> Educational Content</a>
-                        <div class="dropdown-content">
+                        <a href="#" aria-expanded="false" aria-controls="educational-content"><i class="fas fa-book"></i> Educational Content</a>
+                        <div class="dropdown-content" id="educational-content">
                             <!-- Veganism Column -->
                             <div class="dropdown-column">
                                 <h4><i class="fas fa-leaf"></i> Veganism</h4>
-                                <a href="pages/veganism.html">Introduction</a>
+                                <a href="pages/veganism.html">Introduction <span class="badge">Popular</span></a>
                                 <a href="pages/vegan_recipes.html">Recipes</a>
                             </div>
                             
@@ -32,7 +32,7 @@
                             <div class="dropdown-column">
                                 <h4><i class="fas fa-running"></i> Fitness</h4>
                                 <a href="pages/fitness.html">Workouts</a>
-                                <a href="pages/workout_plans.html">Plans</a>
+                                <a href="pages/workout_plans.html">Plans <span class="badge">New</span></a>
                             </div>
                             
                             <!-- Recovery Column -->
@@ -46,20 +46,20 @@
                     
                     <!-- Tools Dropdown -->
                     <li class="dropdown">
-                        <a href="#"><i class="fas fa-tools"></i> Tools</a>
-                        <div class="dropdown-content">
+                        <a href="#" aria-expanded="false" aria-controls="tools-content"><i class="fas fa-tools"></i> Tools</a>
+                        <div class="dropdown-content" id="tools-content">
                             <a href="pages/health_score.html">Health Score</a>
                             <a href="pages/habit_tracker.html">Habit Tracker</a>
                             <a href="pages/self_assessment.html">Self-Assessment</a>
-                            <a href极客时间="/pages/readiness_assessment.html">Readiness Test</a>
+                            <a href="pages/readiness_assessment.html">Readiness Test</a>
                             <a href="pages/personalized_plan.html">Personalized Plan</a>
-                        </极客时间div>
+                        </div>
                     </li>
                     
                     <!-- Community Dropdown -->
                     <li class="dropdown">
-                        <a href="#"><i class="fas fa-users"></i> Community</a>
-                        <div class="dropdown-content">
+                        <a href="#" aria-expanded="false" aria-controls="community-content"><i class="fas fa-users"></i> Community</a>
+                        <div class="dropdown-content" id="community-content">
                             <a href="pages/community_forum.html">Forum</a>
                             <a href="pages/events.html">Events</a>
                             <a href="pages/expert_qa.html">Expert Q&A</a>
@@ -298,7 +298,7 @@
                             <div class="gallery-caption">Vegan Meal Prep</div>
                         </div>
                         <div class="gallery-item">
-                            <img src="https://images.unsplash.com/photo-1549060279-7极客时间e168fce7090?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Community">
+                            <img src="https://images.unsplash.com/photo-1549060279-7e168fce7090?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Community">
                             <div class="gallery-caption">Community Support Group</div>
                         </div>
                     </div>
