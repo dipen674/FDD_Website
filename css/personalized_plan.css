@@ -1,0 +1,23 @@
+/* Personalized Plan styles */
+.plan-container {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.plan-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.plan-goal {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.plan-goal i {
+    margin-right: 15px;
+    color: var(--primary);
+}

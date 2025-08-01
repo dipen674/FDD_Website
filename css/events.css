@@ -1,0 +1,25 @@
+/* Events page styles */
+.events-calendar {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.event-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.event-details {
+    padding: 15px;
+}
+
+.event-date {
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,28 @@
+/* Workout Plans styles */
+.workout-filters {
+    margin-bottom: 30px;
+}
+
+.plan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.difficulty-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+
+.beginner {
+    background-color: #e9f7f5;
+    color: var(--primary);
+}
+
+.intermediate {
+    background-color: #fff8e1;
+    color: #ffa000;
+}
