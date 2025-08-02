@@ -268,16 +268,16 @@ header {
     margin-left: 5px;
 }
 
-/* Hero Section (Video Only) */
 /* Hero Section (Video with Overlay Content) */
 .hero {
     position: relative;
     padding: 0;
-    min-height: 600px; /* Adjusted for better video coverage */
+    min-height: 600px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 50, 70, 0.2) 100%); /* Lighter gradient overlay */
 }
 
 .video-background {
@@ -302,47 +302,78 @@ header {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    color: #ffffff; /* White text for visibility over video */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for readability */
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9); /* Stronger shadow for readability without background */
     padding: 20px;
-    background: rgba(0, 0, 0, 0.4); /* Semi-transparent background for contrast */
-    border-radius: 10px;
+    /* Removed background and box-shadow to avoid blocking video */
     animation: slideIn 1.5s ease-out;
 }
 
 .hero-content h1 {
     font-size: 3rem;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     line-height: 1.3;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    color: #e0f7fa; /* Lighter white with a hint of blue for attractiveness */
+    color: #e0f7fa;
     transition: transform 0.3s ease, color 0.3s ease;
+    text-transform: uppercase;
 }
 
 .hero-content h1:hover {
     transform: scale(1.05);
-    color: #00c4cc; /* Interactive color change */
+    color: #00c4cc;
 }
 
 .highlight {
-    color: #ff6f61; /* Vibrant accent color */
+    color: #ff6f61;
     position: relative;
     transition: color 0.3s ease;
+    text-shadow: 1px 1px 4px rgba(255, 111, 97, 0.8);
 }
 
 .highlight:hover {
-    color: #ff9e8f; /* Softer hover effect */
+    color: #ff9e8f;
 }
 
 .hero-content p {
     font-size: 1.1rem;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-family: 'Poppins', sans-serif;
-    color: #ffffff; /* White for readability */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
     animation: fadeIn 2s ease-out forwards;
     animation-delay: 0.5s;
+}
+
+/* Add Buttons for Interactivity */
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.hero-buttons .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 25px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.3); /* Subtle button background */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-2px);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-buttons .btn-outline {
+    background: transparent;
+    border: 2px solid #ffffff;
+}
+
+.hero-buttons .btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
 @keyframes slideIn {
@@ -364,7 +395,6 @@ header {
         opacity: 1;
     }
 }
-
 
 /* Core Programs */
 .core-programs {
