@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealSpace | Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">Heal<span>Space</span></a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="educational-content"><i class="fas fa-book"></i> Educational Content</a>
+                        <div class="dropdown-content" id="educational-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-leaf"></i> Veganism</h4>
+                                <a href="../pages/veganism.html">Introduction <span class="badge">Popular</span></a>
+                                <a href="../pages/vegan_recipes.html">Recipes</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-running"></i> Fitness</h4>
+                                <a href="../pages/fitness.html">Workouts</a>
+                                <a href="../pages/workout_plans.html">Plans <span class="badge">New</span></a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-hands-helping"></i> Recovery</h4>
+                                <a href="../pages/addiction_recovery.html">Guide</a>
+                                <a href="../pages/recovery_resources.html">Resources</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="tools-content"><i class="fas fa-tools"></i> Tools</a>
+                        <div class="dropdown-content" id="tools-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-chart-line"></i> Health Tracking</h4>
+                                <a href="../pages/health_score.html">Health Score</a>
+                                <a href="../pages/habit_tracker.html">Habit Tracker</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-check-circle"></i> Assessments</h4>
+                                <a href="../pages/self_assessment.html">Self-Assessment</a>
+                                <a href="../pages/readiness_assessment.html">Readiness Test</a>
+                                <a href="../pages/personalized_plan.html">Personalized Plan</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="community-content"><i class="fas fa-users"></i> Community</a>
+                        <div class="dropdown-content" id="community-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-comments"></i> Engagement</h4>
+                                <a href="../pages/community_forum.html">Forum</a>
+                                <a href="../pages/events.html">Events</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-user-plus"></i> Participation</h4>
+                                <a href="../pages/expert_qa.html">Expert Q&A</a>
+                                <a href="../pages/join_community.html">Join Us</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="../pages/blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                    <li><a href="gallery.html" class="active"><i class="fas fa-image"></i> Gallery</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="../pages/join_community.html" class="btn btn-primary">Join Now</a>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+            <!-- Filter Buttons -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="veganism">Veganism</button>
+                <button class="filter-btn" data-filter="fitness">Fitness</button>
+                <button class="filter-btn" data-filter="recovery">Recovery</button>
+                <button class="filter-btn" data-filter="community">Community</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="veganism">
+                    <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Vegan Meal Prep">
+                    <div class="gallery-caption">Vegan Meal Prep with Nepali Ingredients</div>
+                </div>
+                <div class="gallery-item" data-category="fitness">
+                    <video controls preload="metadata" poster="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                        <source src="../videos/index/bodyweight_workout.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="gallery-caption">10-Minute Home Workout</div>
+                </div>
+                <div class="gallery-item" data-category="recovery">
+                    <img src="https://images.unsplash.com/photo-1506126279646-a697353d3166?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Meditation">
+                    <div class="gallery-caption">Mindfulness Meditation Session</div>
+                </div>
+                <div class="gallery-item" data-category="community">
+                    <video controls preload="metadata" poster="https://images.unsplash.com/photo-1549060279-7e168fce7090?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                        <source src="../videos/index/community_event.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="gallery-caption">Vegan Cooking Masterclass Highlights</div>
+                </div>
+                <div class="gallery-item" data-category="veganism">
+                    <video controls preload="metadata" poster="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                        <source src="../videos/index/vegan_cooking_demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="gallery-caption">Quick Vegan Dal Recipe</div>
+                </div>
+                <div class="gallery-item" data-category="fitness">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Yoga Session">
+                    <div class="gallery-caption">Morning Yoga Session in Chitwan</div>
+                </div>
+                <div class="gallery-item" data-category="recovery">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Challenge">
+                    <div class="gallery-caption">30-Day Recovery Challenge Success</div>
+                </div>
+                <div class="gallery-item" data-category="community">
+                    <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Community Event">
+                    <div class="gallery-caption">Teej Festival Health Workshop</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Heal<span>Space</span></h3>
+                    <p>Your trusted partner in health, wellness, and personal transformation since 2017.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/dipendra.bhatta.244268/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../pages/veganism.html">Veganism</a></li>
+                        <li><a href="../pages/fitness.html">Fitness</a></li>
+                        <li><a href="../pages/addiction_recovery.html">Recovery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../pages/health_score.html">Health Score</a></li>
+                        <li><a href="../pages/habit_tracker.html">Tracker</a></li>
+                        <li><a href="../pages/community_forum.html">Community</a></li>
+                        <li><a href="../pages/blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@healspace.com</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Wellness St, Health City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HealSpace. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/pages/gallery.js"></script>
+    <script src="../js/pages/index.js"></script>
+</body>
+</html>
