@@ -8,8 +8,10 @@
     --transition: all 0.3s ease;
     --shadow: 0 5px 15px rgba(0,0,0,0.1);
     --shadow-hover: 0 10px 25px rgba(0,0,0,0.15);
-    --radius: 10px;
+    --radius: 20px;
 }
+
+
 
 * {
     margin: 0;
