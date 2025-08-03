@@ -3,46 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workout Plans | lbef</title>
+    <title>HealSpace | Workout Plans</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/workout_plans.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <!-- Same header as index.html -->
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">Heal<span>Space</span></a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="educational-content"><i class="fas fa-book"></i> Educational Content</a>
+                        <div class="dropdown-content" id="educational-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-leaf"></i> Veganism</h4>
+                                <a href="veganism.html">Introduction <span class="badge">Popular</span></a>
+                                <a href="vegan_recipes.html">Recipes</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-running"></i> Fitness</h4>
+                                <a href="fitness.html">Workouts</a>
+                                <a href="workout_plans.html">Plans <span class="badge">New</span></a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-hands-helping"></i> Recovery</h4>
+                                <a href="addiction_recovery.html">Guide</a>
+                                <a href="recovery_resources.html">Resources</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="tools-content"><i class="fas fa-tools"></i> Tools</a>
+                        <div class="dropdown-content" id="tools-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-chart-line"></i> Health Tracking</h4>
+                                <a href="health_score.html">Health Score</a>
+                                <a href="habit_tracker.html">Habit Tracker</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-check-circle"></i> Assessments</h4>
+                                <a href="self_assessment.html">Self-Assessment</a>
+                                <a href="readiness_assessment.html">Readiness Test</a>
+                                <a href="personalized_plan.html">Personalized Plan</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="community-content"><i class="fas fa-users"></i> Community</a>
+                        <div class="dropdown-content" id="community-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-comments"></i> Engagement</h4>
+                                <a href="community_forum.html">Forum</a>
+                                <a href="events.html">Events</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-user-plus"></i> Participation</h4>
+                                <a href="expert_qa.html">Expert Q&A</a>
+                                <a href="join_community.html">Join Us</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-image"></i> Gallery</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="join_community.html" class="btn btn-primary">Join Now</a>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <main class="page-content">
+
+    <!-- Workout Plans Section -->
+    <section class="workout-plans" id="workout-plans">
         <div class="container">
-            <div class="content-container">
-                <div class="content-header">
-                    <h1>Workout Plans</h1>
-                    <p>Customized exercise programs for all fitness levels</p>
-                </div>
-                
-                <div class="workout-filters">
-                    <button class="filter-btn active">All</button>
-                    <button class="filter-btn">Beginner</button>
-                    <button class="filter-btn">Intermediate</button>
-                    <!-- More filters -->
-                </div>
-                
-                <div class="plan-grid">
-                    <div class="plan-card">
-                        <span class="difficulty-tag beginner">Beginner</span>
-                        <h3>4-Week Beginner Strength Program</h3>
-                        <p>Build foundational strength with this progressive plan.</p>
+            <h2 class="section-title">Personalized Workout Plans</h2>
+            <p class="section-subtitle">Filter and explore our wide range of plans to find the perfect fit for your fitness goals.</p>
+            <div class="plan-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="strength">Strength</button>
+                <button class="filter-btn" data-filter="cardio">Cardio</button>
+                <button class="filter-btn" data-filter="flexibility">Flexibility</button>
+                <button class="filter-btn" data-filter="recovery">Recovery</button>
+                <button class="filter-btn" data-filter="hybrid">Hybrid</button>
+                <button class="filter-btn reset-btn">Reset Filters</button>
+            </div>
+            <div class="plans-grid">
+                <div class="plan-card" data-category="strength" data-difficulty="beginner">
+                    <img src="../img/index/strength_plan.jpg" alt="Beginner Strength">
+                    <div class="plan-content">
+                        <h3>Beginner Strength <span class="difficulty-tooltip" data-tooltip="Beginner: Perfect for those new to fitness">★</span></h3>
+                        <p>Build muscle with bodyweight exercises and light weights, ideal for starting your fitness journey.</p>
+                        <button class="btn btn-primary view-plan-btn" data-plan="beginner-strength">View Plan</button>
                     </div>
-                    <!-- More plans -->
+                </div>
+                <div class="plan-card" data-category="cardio" data-difficulty="intermediate">
+                    <img src="../img/index/cardio_plan.jpg" alt="Cardio Blast">
+                    <div class="plan-content">
+                        <h3>Cardio Blast <span class="difficulty-tooltip" data-tooltip="Intermediate: Suitable for those with some fitness experience">★★</span></h3>
+                        <p>High-energy cardio workouts to boost endurance and burn calories, tailored for all levels.</p>
+                        <button class="btn btn-primary view-plan-btn" data-plan="cardio-blast">View Plan</button>
+                    </div>
+                </div>
+                <div class="plan-card" data-category="flexibility" data-difficulty="beginner">
+                    <img src="../img/index/flexibility_plan.jpg" alt="Yoga & Flexibility">
+                    <div class="plan-content">
+                        <h3>Yoga & Flexibility <span class="difficulty-tooltip" data-tooltip="Beginner: Great for improving mobility">★</span></h3>
+                        <p>Enhance mobility and reduce stress with guided yoga and stretching routines.</p>
+                        <button class="btn btn-primary view-plan-btn" data-plan="yoga-flexibility">View Plan</button>
+                    </div>
+                </div>
+                <div class="plan-card" data-category="recovery" data-difficulty="beginner">
+                    <img src="../img/index/recovery_plan.jpg" alt="Recovery Flow">
+                    <div class="plan-content">
+                        <h3>Recovery Flow <span class="difficulty-tooltip" data-tooltip="Beginner: Gentle exercises for recovery">★</span></h3>
+                        <p>Gentle exercises to support physical and mental recovery, ideal for post-injury or sobriety.</p>
+                        <button class="btn btn-primary view-plan-btn" data-plan="recovery-flow">View Plan</button>
+                    </div>
+                </div>
+                <div class="plan-card" data-category="strength" data-difficulty="advanced">
+                    <img src="../img/index/strength_plan.jpg" alt="Advanced Strength">
+                    <div class="plan-content">
+                        <h3>Advanced Strength <span class="difficulty-tooltip" data-tooltip="Advanced: For experienced lifters">★★★</span></h3>
+                        <p>Intense weightlifting and functional training for experienced fitness enthusiasts.</p>
+                        <button class="btn btn-primary view-plan-btn" data-plan="advanced-strength">View Plan</button>
+                    </div>
+                </div>
+                <div class="plan-card" data-category="cardio" data-difficulty="advanced">
+                    <video controls preload="metadata" poster="../img/index/cardio_plan.jpg">
+                        <source src="../videos/index/cardio_workout.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="plan-content">
+                        <h3>HIIT Cardio <span class="difficulty-tooltip" data-tooltip="Advanced: High-intensity for maximum results">★★★</span></h3>
+                        <p>High-Intensity Interval Training to maximize fat burn and cardiovascular health.</p>
+                        <button class="btn btn-primary view-plan-btn" data-plan="hiit-cardio">View Plan</button>
+                    </div>
+                </div>
+                <div class="plan-card" data-category="hybrid" data-difficulty="intermediate">
+                    <img src="../img/index/hybrid_plan.jpg" alt="Strength & Cardio Hybrid">
+                    <div class="plan-content">
+                        <h3>Strength & Cardio Hybrid <span class="difficulty-tooltip" data-tooltip="Intermediate: Balanced strength and cardio">★★</span></h3>
+                        <p>Combine strength and cardio for a balanced fitness routine that builds muscle and endurance.</p>
+                        <button class="btn btn-primary view-plan-btn" data-plan="strength-cardio-hybrid">View Plan</button>
+                    </div>
+                </div>
+                <div class="plan-card" data-category="flexibility" data-difficulty="intermediate">
+                    <video controls preload="metadata" poster="../img/index/flexibility_plan.jpg">
+                        <source src="../videos/index/flexibility_workout.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="plan-content">
+                        <h3>Pilates Core <span class="difficulty-tooltip" data-tooltip="Intermediate: Focus on core strength and flexibility">★★</span></h3>
+                        <p>Strengthen your core and improve flexibility with Pilates-inspired workouts.</p>
+                        <button class="btn btn-primary view-plan-btn" data-plan="pilates-core">View Plan</button>
+                    </div>
+                </div>
+                <div class="plan-card" data-category="recovery" data-difficulty="beginner">
+                    <img src="../img/index/recovery_plan.jpg" alt="Mindful Recovery">
+                    <div class="plan-content">
+                        <h3>Mindful Recovery <span class="difficulty-tooltip" data-tooltip="Beginner: Gentle and restorative">★</span></h3>
+                        <p>Restorative exercises with meditation to support mental and physical healing.</p>
+                        <button class="btn btn-primary view-plan-btn" data-plan="mindful-recovery">View Plan</button>
+                    </div>
+                </div>
+                <div class="plan-card" data-category="hybrid" data-difficulty="advanced">
+                    <video controls preload="metadata" poster="../img/index/hybrid_plan.jpg">
+                        <source src="../videos/index/hybrid_workout.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="plan-content">
+                        <h3>Ultimate Fitness Challenge <span class="difficulty-tooltip" data-tooltip="Advanced: Intense full-body workouts">★★★</span></h3>
+                        <p>A high-intensity hybrid plan for peak performance and total body transformation.</p>
+                        <button class="btn btn-primary view-plan-btn" data-plan="ultimate-fitness">View Plan</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
+    <!-- Featured Workouts Section -->
+    <section class="featured-workouts">
+        <div class="container">
+            <h2 class="section-title">Featured Workouts</h2>
+            <p class="section-subtitle">Get a taste of our workouts with these sample routines from our plans.</p>
+            <div class="workouts-slider">
+                <div class="workout-card active">
+                    <video controls preload="metadata" poster="../img/index/featured_workout_1.jpg">
+                        <source src="../videos/index/featured_workout_1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="workout-content">
+                        <h3>10-Minute Core Blast</h3>
+                        <p>Strengthen your core with this quick Pilates-inspired routine, perfect for busy days.</p>
+                        <p><strong>Tip:</strong> Engage your core throughout to maximize results.</p>
+                    </div>
+                </div>
+                <div class="workout-card">
+                    <video controls preload="metadata" poster="../img/index/featured_workout_2.jpg">
+                        <source src="../videos/index/featured_workout_2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="workout-content">
+                        <h3>15-Minute HIIT Sprint</h3>
+                        <p>Boost your heart rate with this high-intensity interval training session.</p>
+                        <p><strong>Tip:</strong> Stay hydrated and push through the intervals!</p>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Plan Details -->
+    <div class="plan-modal" id="plan-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div id="modal-body"></div>
+            <div class="progress-section">
+                <h4>Track Your Progress</h4>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <p class="progress-text">0% Complete</p>
+                <button class="btn btn-primary start-plan-btn">Start Plan</button>
+                <button class="btn btn-outline save-plan-btn">Save Plan</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
     <footer>
-        <!-- Same footer as index.html -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Heal<span>Space</span></h3>
+                    <p>Your trusted partner in health, wellness, and personal transformation since 2017.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/dipendra.bhatta.244268/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="veganism.html">Veganism</a></li>
+                        <li><a href="fitness.html">Fitness</a></li>
+                        <li><a href="addiction_recovery.html">Recovery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="health_score.html">Health Score</a></li>
+                        <li><a href="habit_tracker.html">Tracker</a></li>
+                        <li><a href="community_forum.html">Community</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@healspace.com</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Wellness St, Health City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HealSpace. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="../js/main.js"></script>
+    <script src="../js/pages/workout_plan.js"></script>
 </body>
 </html>
