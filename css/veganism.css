@@ -1,18 +1,1236 @@
-/* Veganism page specific styles */
-.content-header h1 {
-    color: #2a9d8f;
-}
+/* Veganism Page Specific Styles */
 
-.recipe-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.recipe-card {
-    border-radius: 10px;
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #2a9d8f 0%, #238f82 50%, #1a7a6f 100%);
+    color: white;
+    padding: 120px 0 80px;
+    position: relative;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-text .highlight {
+    background: linear-gradient(45deg, #e9c46a, #f4a261);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 30px;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat i {
+    font-size: 1.5rem;
+    color: #e9c46a;
+}
+
+.stat span {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floating-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 60px 40px;
+    text-align: center;
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.floating-card i {
+    font-size: 4rem;
+    color: #e9c46a;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.floating-card h3 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* What is Veganism Section */
+.what-is-veganism {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fffe 0%, #efeee1 100%);
+}
+
+.definition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.definition-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.definition-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--primary);
+}
+
+.definition-card.main-definition {
+    grid-column: span 2;
+    background: linear-gradient(135deg, #2a9d8f 0%, #238f82 100%);
+    color: white;
+}
+
+.definition-card.main-definition::before {
+    background: #e9c46a;
+}
+
+.definition-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.definition-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.main-definition .definition-icon {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.definition-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.definition-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--secondary);
+}
+
+.main-definition h3 {
+    color: white;
+}
+
+.definition-card p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+blockquote {
+    border-left: 4px solid #e9c46a;
+    padding-left: 20px;
+    font-style: italic;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 100px 0;
+    background: white;
+}
+
+.benefits-tabs {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.benefit-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid #f0f0f0;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary);
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.benefit-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.benefit-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--secondary);
+}
+
+.benefit-card p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.benefit-stat {
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.benefit-stat .number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.benefit-stat .description {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Environmental Impact */
+.environmental-impact {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.impact-circle {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 0 20px 40px rgba(42, 157, 143, 0.3);
+}
+
+.impact-circle i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.impact-circle h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.impact-circle p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.impact-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.impact-stat {
+    background: white;
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: var(--transition);
+}
+
+.impact-stat:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stat-icon.water { background: linear-gradient(135deg, #3498db, #2980b9); }
+.stat-icon.co2 { background: linear-gradient(135deg, #95a5a6, #7f8c8d); }
+.stat-icon.land { background: linear-gradient(135deg, #27ae60, #229954); }
+.stat-icon.grain { background: linear-gradient(135deg, #f39c12, #e67e22); }
+
+.stat-icon i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.stat-info {
+    flex: 1;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--secondary);
+    margin-bottom: 5px;
+}
+
+.stat-unit {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Ethical Content */
+.ethical-content {
+    text-align: center;
+}
+
+.ethical-reasons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.ethical-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.ethical-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.ethical-card i {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.ethical-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--secondary);
+}
+
+.ethical-card p {
+    line-height: 1.6;
+    color: #666;
+}
+
+.ethical-quote {
+    background: linear-gradient(135deg, #f8fffe, #efeee1);
+    padding: 50px;
+    border-radius: var(--radius);
+    margin-top: 40px;
+}
+
+.ethical-quote blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--secondary);
+    border: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.ethical-quote cite {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Comparison Section */
+.comparison {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fffe 0%, #efeee1 100%);
+}
+
+.comparison-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.comparison-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.comp-tab-btn {
+    background: white;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
+
+.comp-tab-btn.active,
+.comp-tab-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.comparison-content {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.comparison-content.active {
+    display: block;
+}
+
+/* Comparison Table */
+.comparison-table {
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: var(--secondary);
+    color: white;
+    font-weight: 600;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-cell {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.table-cell.aspect {
+    font-weight: 600;
+    color: var(--secondary);
+    background: #f8f9fa;
+}
+
+.table-cell.vegan {
+    background: rgba(42, 157, 143, 0.05);
+}
+
+.table-cell.non-vegan {
+    background: rgba(231, 76, 60, 0.05);
+}
+
+.table-cell i {
+    font-size: 1.2rem;
+}
+
+.table-cell .fa-check-circle {
+    color: #27ae60;
+}
+
+.table-cell .fa-exclamation-triangle {
+    color: #f39c12;
+}
+
+.table-cell .fa-minus-circle {
+    color: #95a5a6;
+}
+
+/* Health Comparison */
+.health-comparison-grid {
+    display: grid;
+    gap: 30px;
+}
+
+.health-metric {
+    background: white;
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.health-metric h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--secondary);
+}
+
+.metric-bars {
+    display: grid;
+    gap: 15px;
+}
+
+.metric-bar {
+    position: relative;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.metric-bar.vegan {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+}
+
+.metric-bar.non-vegan {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.metric-bar:hover {
+    transform: scale(1.02);
+}
+
+/* Environmental Comparison */
+.env-metric-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.env-metric {
+    background: white;
+    padding: 40px 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.env-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.env-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.env-metric h3 {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    color: var(--secondary);
+}
+
+.env-comparison {
+    display: grid;
+    gap: 15px;
+}
+
+.env-bar {
+    display: grid;
+    grid-template-columns: 80px 1fr 100px;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.env-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--secondary);
+}
+
+.env-bar-fill {
+    height: 20px;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.env-bar.vegan .env-bar-fill {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+}
+
+.env-bar.non-vegan .env-bar-fill {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.env-value {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--secondary);
+    text-align: right;
+}
+
+/* Economic Comparison */
+.economic-comparison {
+    background: white;
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.cost-breakdown {
+    display: grid;
+    gap: 40px;
+}
+
+.cost-category h3 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    color: var(--secondary);
+    text-align: center;
+}
+
+.cost-comparison {
+    display: grid;
+    gap: 20px;
+}
+
+.cost-item {
+    display: grid;
+    grid-template-columns: 120px 1fr 100px;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+}
+
+.cost-label {
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.cost-bar {
+    height: 30px;
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+.cost-item.vegan .cost-bar {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+}
+
+.cost-item.non-vegan .cost-bar {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.cost-amount {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--secondary);
+    text-align: right;
+}
+
+.healthcare-savings {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.savings-card {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 40px 30px;
+    border-radius: var(--radius);
+    display: inline-block;
+    min-width: 280px;
+}
+
+.savings-card i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.savings-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.savings-amount {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #e9c46a;
+}
+
+.savings-desc {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Myths Section */
+.myths {
+    padding: 100px 0;
+    background: white;
+}
+
+.myths-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.myth-card {
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.myth-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.myth-header,
+.truth-header {
+    padding: 25px 30px 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.myth-header {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+}
+
+.truth-header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+}
+
+.myth-icon,
+.truth-icon {
+    font-size: 1.5rem;
+}
+
+.myth-header h3,
+.truth-header h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.myth-text,
+.truth-text {
+    padding: 0 30px 25px;
+    line-height: 1.6;
+}
+
+.myth-text {
+    background: #fff5f5;
+    color: #721c24;
+    font-style: italic;
+    padding-top: 15px;
+}
+
+.truth-text {
+    color: var(--secondary);
+    padding-top: 15px;
+}
+
+/* Getting Started Section */
+.getting-started {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fffe 0%, #efeee1 100%);
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.step {
+    background: white;
+    padding: 40px 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: var(--transition);
+}
+
+.step:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.step-number {
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    box-shadow: 0 5px 15px rgba(42, 157, 143, 0.3);
+}
+
+.step-content {
+    padding-top: 20px;
+}
+
+.step-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--secondary);
+}
+
+.step-content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.step-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.step-content li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #666;
+}
+
+.step-content li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* CTA Section */
+.cta {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+    font-size: 1.1rem;
+    padding: 15px 35px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .definition-card.main-definition {
+        grid-column: span 1;
+    }
+    
+    .tab-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    .environmental-impact {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .impact-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .comparison-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .comp-tab-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .table-header,
+    .table-row {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .table-cell {
+        justify-content: center;
+        border-bottom: 1px solid #f0f0f0;
+        padding: 15px;
+    }
+    
+    .table-row .table-cell:last-child {
+        border-bottom: none;
+    }
+    
+    .env-metric-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .env-bar {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .env-value {
+        text-align: center;
+    }
+    
+    .cost-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .cost-amount {
+        text-align: center;
+    }
+    
+    .ethical-reasons {
+        grid-template-columns: 1fr;
+    }
+    
+    .steps-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+    
+    .stat {
+        flex-direction: column;
+        text-align: center;
+        padding: 12px 15px;
+    }
+    
+    .stat span {
+        font-size: 0.85rem;
+    }
+    
+    .floating-card {
+        padding: 40px 25px;
+    }
+    
+    .floating-card i {
+        font-size: 3rem;
+    }
+    
+    .floating-card h3 {
+        font-size: 1.4rem;
+    }
+    
+    .definition-card,
+    .benefit-card,
+    .ethical-card,
+    .step {
+        padding: 30px 20px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    
+    .impact-circle {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .impact-circle i {
+        font-size: 2.5rem;
+    }
+    
+    .impact-circle h3 {
+        font-size: 1.3rem;
+    }
+    
+    .ethical-quote {
+        padding: 30px 20px;
+    }
+    
+    .ethical-quote blockquote {
+        font-size: 1.2rem;
+    }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
+/* Loading animation for dynamic content */
+.loading {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.loading.loaded {
+    opacity: 1;
+    transform: translateY(0);
 }

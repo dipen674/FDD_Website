@@ -3,57 +3,710 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veganism | lbef Health & Wellness</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <title>Veganism Guide - Health & Wellness</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/veganism.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+<!-- Header -->
     <header>
-        <!-- Same header as index.html -->
-    </header>
-
-    <main class="page-content">
         <div class="container">
-            <div class="content-container">
-                <div class="content-header">
-                    <h1>Embracing a Vegan Lifestyle</h1>
-                    <p>Discover the benefits of plant-based living</p>
-                </div>
-                
-                <div class="content-section">
-                    <h2>Why Choose Veganism?</h2>
-                    <div class="content-grid">
-                        <div class="content-card">
-                            <h3><i class="fas fa-heart"></i> Health Benefits</h3>
-                            <p>Reduced risk of chronic diseases, improved digestion, and increased energy levels.</p>
-                        </div>
-                        <!-- More cards -->
-                    </div>
-                </div>
-                
-                <div class="content-section">
-                    <h2>Featured Recipes</h2>
-                    <div class="recipe-grid">
-                        <div class="recipe-card">
-                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Vegan Meal">
-                            <div class="recipe-content">
-                                <h3>Quinoa Buddha Bowl</h3>
-                                <p>Nutrient-packed bowl with quinoa, roasted veggies, and tahini dressing.</p>
+            <nav class="navbar">
+                <a href="../index.html" class="logo">Heal<span>Space</span></a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="educational-content"><i class="fas fa-book"></i> Educational Content</a>
+                        <div class="dropdown-content" id="educational-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-leaf"></i> Veganism</h4>
+                                <a href="veganism.html">Introduction <span class="badge">Popular</span></a>
+                                <a href="vegan_recipes.html">Recipes</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-running"></i> Fitness</h4>
+                                <a href="fitness.html">Workouts</a>
+                                <a href="workout_plans.html">Plans <span class="badge">New</span></a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-hands-helping"></i> Recovery</h4>
+                                <a href="addiction_recovery.html">Guide</a>
+                                <a href="recovery_resources.html">Resources</a>
                             </div>
                         </div>
-                        <!-- More recipe cards -->
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="tools-content"><i class="fas fa-tools"></i> Tools</a>
+                        <div class="dropdown-content" id="tools-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-chart-line"></i> Health Tracking</h4>
+                                <a href="health_score.html">Health Score</a>
+                                <a href="habit_tracker.html">Habit Tracker</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-check-circle"></i> Assessments</h4>
+                                <a href="self_assessment.html">Self-Assessment</a>
+                                <a href="readiness_assessment.html">Readiness Test</a>
+                                <a href="personalized_plan.html">Personalized Plan</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="community-content"><i class="fas fa-users"></i> Community</a>
+                        <div class="dropdown-content" id="community-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-comments"></i> Engagement</h4>
+                                <a href="community_forum.html">Forum</a>
+                                <a href="events.html">Events</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-user-plus"></i> Participation</h4>
+                                <a href="expert_qa.html">Expert Q&A</a>
+                                <a href="join_community.html">Join Us</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-image"></i> Gallery</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="join_community.html" class="btn btn-primary">Join Now</a>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Complete Guide to <span class="highlight">Veganism</span></h1>
+                <p>Discover the transformative power of plant-based living for your health, the environment, and animal welfare</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-heart"></i>
+                        <span>Health Benefits</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-leaf"></i>
+                        <span>Eco-Friendly</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-paw"></i>
+                        <span>Animal Welfare</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Plant-Powered Life</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Veganism Section -->
+    <section class="what-is-veganism">
+        <div class="container">
+            <h2 class="section-title">What is Veganism?</h2>
+            <div class="definition-grid">
+                <div class="definition-card main-definition">
+                    <div class="definition-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Core Definition</h3>
+                    <p>Veganism is a philosophy and way of living that seeks to exclude, as far as possible and practicable, all forms of exploitation of and cruelty to animals for food, clothing, or any other purpose.</p>
+                    <blockquote>
+                        "Veganism is not about perfection, but about making compassionate choices that align with our values."
+                    </blockquote>
+                </div>
+                <div class="definition-card">
+                    <div class="definition-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Dietary Aspect</h3>
+                    <p>A vegan diet excludes all animal products including meat, dairy, eggs, and honey, focusing on plant-based foods.</p>
+                </div>
+                <div class="definition-card">
+                    <div class="definition-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Lifestyle Choice</h3>
+                    <p>Beyond diet, veganism extends to avoiding leather, wool, silk, and products tested on animals.</p>
+                </div>
+                <div class="definition-card">
+                    <div class="definition-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Global Movement</h3>
+                    <p>A growing worldwide movement focused on sustainability, health, and ethical treatment of animals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Benefits of Being Vegan</h2>
+            <div class="benefits-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="health">
+                        <i class="fas fa-heartbeat"></i> Health Benefits
+                    </button>
+                    <button class="tab-btn" data-tab="environment">
+                        <i class="fas fa-earth-americas"></i> Environmental Impact
+                    </button>
+                    <button class="tab-btn" data-tab="ethical">
+                        <i class="fas fa-paw"></i> Ethical Reasons
+                    </button>
+                </div>
+
+                <div class="tab-content active" id="health">
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Heart Health</h3>
+                            <p>Reduced risk of heart disease, lower cholesterol levels, and improved cardiovascular function.</p>
+                            <div class="benefit-stat">
+                                <span class="number">32%</span>
+                                <span class="description">Lower risk of heart disease</span>
+                            </div>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-weight"></i>
+                            </div>
+                            <h3>Weight Management</h3>
+                            <p>Easier weight maintenance, reduced obesity risk, and improved metabolic health.</p>
+                            <div class="benefit-stat">
+                                <span class="number">5-10</span>
+                                <span class="description">Pounds average weight loss</span>
+                            </div>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Disease Prevention</h3>
+                            <p>Lower risk of type 2 diabetes, certain cancers, and inflammatory conditions.</p>
+                            <div class="benefit-stat">
+                                <span class="number">23%</span>
+                                <span class="description">Reduced diabetes risk</span>
+                            </div>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-battery-full"></i>
+                            </div>
+                            <h3>Energy Levels</h3>
+                            <p>Increased energy, better digestion, and improved overall vitality.</p>
+                            <div class="benefit-stat">
+                                <span class="number">More</span>
+                                <span class="description">Sustained energy throughout day</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="environment">
+                    <div class="environmental-impact">
+                        <div class="impact-visual">
+                            <div class="impact-circle">
+                                <i class="fas fa-leaf"></i>
+                                <h3>Your Impact</h3>
+                                <p>By going vegan for one year, you save:</p>
+                            </div>
+                        </div>
+                        <div class="impact-stats">
+                            <div class="impact-stat">
+                                <div class="stat-icon water">
+                                    <i class="fas fa-tint"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-number">219,000</span>
+                                    <span class="stat-unit">gallons of water</span>
+                                </div>
+                            </div>
+                            <div class="impact-stat">
+                                <div class="stat-icon co2">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-number">1.5</span>
+                                    <span class="stat-unit">tons of CO2</span>
+                                </div>
+                            </div>
+                            <div class="impact-stat">
+                                <div class="stat-icon land">
+                                    <i class="fas fa-tree"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-number">10,950</span>
+                                    <span class="stat-unit">sq ft of forest</span>
+                                </div>
+                            </div>
+                            <div class="impact-stat">
+                                <div class="stat-icon grain">
+                                    <i class="fas fa-wheat"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-number">7,300</span>
+                                    <span class="stat-unit">lbs of grain</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="ethical">
+                    <div class="ethical-content">
+                        <div class="ethical-reasons">
+                            <div class="ethical-card">
+                                <i class="fas fa-heart"></i>
+                                <h3>Animal Welfare</h3>
+                                <p>Prevent animal suffering and exploitation in factory farming, testing, and entertainment industries.</p>
+                            </div>
+                            <div class="ethical-card">
+                                <i class="fas fa-balance-scale"></i>
+                                <h3>Social Justice</h3>
+                                <p>Address food inequality and worker exploitation often associated with animal agriculture.</p>
+                            </div>
+                            <div class="ethical-card">
+                                <i class="fas fa-globe-americas"></i>
+                                <h3>Future Generations</h3>
+                                <p>Create a more sustainable world for future generations through conscious consumption choices.</p>
+                            </div>
+                        </div>
+                        <div class="ethical-quote">
+                            <blockquote>
+                                "The question is not 'Can they reason?' nor 'Can they talk?' but 'Can they suffer?'"
+                                <cite>— Jeremy Bentham</cite>
+                            </blockquote>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
+    <!-- Comparison Section -->
+    <section class="comparison">
+        <div class="container">
+            <h2 class="section-title">Vegan vs Non-Vegan: Detailed Comparison</h2>
+            <div class="comparison-container">
+                <div class="comparison-tabs">
+                    <button class="comp-tab-btn active" data-comparison="nutrition">Nutrition</button>
+                    <button class="comp-tab-btn" data-comparison="health">Health Impact</button>
+                    <button class="comp-tab-btn" data-comparison="environment">Environment</button>
+                    <button class="comp-tab-btn" data-comparison="economics">Economics</button>
+                </div>
+
+                <div class="comparison-content active" id="nutrition">
+                    <div class="comparison-table">
+                        <div class="table-header">
+                            <div class="table-cell">Aspect</div>
+                            <div class="table-cell vegan">Vegan Diet</div>
+                            <div class="table-cell non-vegan">Non-Vegan Diet</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell aspect">Fiber Intake</div>
+                            <div class="table-cell vegan">
+                                <i class="fas fa-check-circle"></i>
+                                <span>High (25-35g daily)</span>
+                            </div>
+                            <div class="table-cell non-vegan">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>Often Low (15-20g daily)</span>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell aspect">Antioxidants</div>
+                            <div class="table-cell vegan">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Very High</span>
+                            </div>
+                            <div class="table-cell non-vegan">
+                                <i class="fas fa-minus-circle"></i>
+                                <span>Moderate</span>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell aspect">Saturated Fat</div>
+                            <div class="table-cell vegan">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Low</span>
+                            </div>
+                            <div class="table-cell non-vegan">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>Often High</span>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell aspect">Cholesterol</div>
+                            <div class="table-cell vegan">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Zero</span>
+                            </div>
+                            <div class="table-cell non-vegan">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>Present</span>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell aspect">B12 Vitamin</div>
+                            <div class="table-cell vegan">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>Requires supplementation</span>
+                            </div>
+                            <div class="table-cell non-vegan">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Naturally present</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison-content" id="health">
+                    <div class="health-comparison-grid">
+                        <div class="health-metric">
+                            <h3>Heart Disease Risk</h3>
+                            <div class="metric-bars">
+                                <div class="metric-bar vegan" style="width: 32%;">
+                                    <span>Vegan: 32% lower risk</span>
+                                </div>
+                                <div class="metric-bar non-vegan" style="width: 68%;">
+                                    <span>Non-Vegan: Standard risk</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="health-metric">
+                            <h3>Type 2 Diabetes Risk</h3>
+                            <div class="metric-bars">
+                                <div class="metric-bar vegan" style="width: 23%;">
+                                    <span>Vegan: 23% lower risk</span>
+                                </div>
+                                <div class="metric-bar non-vegan" style="width: 77%;">
+                                    <span>Non-Vegan: Standard risk</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="health-metric">
+                            <h3>Cancer Risk</h3>
+                            <div class="metric-bars">
+                                <div class="metric-bar vegan" style="width: 15%;">
+                                    <span>Vegan: 15% lower risk</span>
+                                </div>
+                                <div class="metric-bar non-vegan" style="width: 85%;">
+                                    <span>Non-Vegan: Standard risk</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="health-metric">
+                            <h3>BMI (Average)</h3>
+                            <div class="metric-bars">
+                                <div class="metric-bar vegan" style="width: 45%;">
+                                    <span>Vegan: 23.6 BMI</span>
+                                </div>
+                                <div class="metric-bar non-vegan" style="width: 55%;">
+                                    <span>Non-Vegan: 28.8 BMI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison-content" id="environment">
+                    <div class="environmental-comparison">
+                        <div class="env-metric-grid">
+                            <div class="env-metric">
+                                <div class="env-icon">
+                                    <i class="fas fa-tint"></i>
+                                </div>
+                                <h3>Water Usage</h3>
+                                <div class="env-comparison">
+                                    <div class="env-bar vegan">
+                                        <span class="env-label">Vegan</span>
+                                        <div class="env-bar-fill" style="width: 20%;"></div>
+                                        <span class="env-value">629 gallons/day</span>
+                                    </div>
+                                    <div class="env-bar non-vegan">
+                                        <span class="env-label">Non-Vegan</span>
+                                        <div class="env-bar-fill" style="width: 100%;"></div>
+                                        <span class="env-value">1,847 gallons/day</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="env-metric">
+                                <div class="env-icon">
+                                    <i class="fas fa-smog"></i>
+                                </div>
+                                <h3>CO2 Emissions</h3>
+                                <div class="env-comparison">
+                                    <div class="env-bar vegan">
+                                        <span class="env-label">Vegan</span>
+                                        <div class="env-bar-fill" style="width: 25%;"></div>
+                                        <span class="env-value">1.5 tons/year</span>
+                                    </div>
+                                    <div class="env-bar non-vegan">
+                                        <span class="env-label">Non-Vegan</span>
+                                        <div class="env-bar-fill" style="width: 100%;"></div>
+                                        <span class="env-value">3.3 tons/year</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="env-metric">
+                                <div class="env-icon">
+                                    <i class="fas fa-tree"></i>
+                                </div>
+                                <h3>Land Usage</h3>
+                                <div class="env-comparison">
+                                    <div class="env-bar vegan">
+                                        <span class="env-label">Vegan</span>
+                                        <div class="env-bar-fill" style="width: 30%;"></div>
+                                        <span class="env-value">1/6 acre/year</span>
+                                    </div>
+                                    <div class="env-bar non-vegan">
+                                        <span class="env-label">Non-Vegan</span>
+                                        <div class="env-bar-fill" style="width: 100%;"></div>
+                                        <span class="env-value">3.25 acres/year</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison-content" id="economics">
+                    <div class="economic-comparison">
+                        <div class="cost-breakdown">
+                            <div class="cost-category">
+                                <h3>Weekly Grocery Costs</h3>
+                                <div class="cost-comparison">
+                                    <div class="cost-item vegan">
+                                        <span class="cost-label">Vegan Diet</span>
+                                        <span class="cost-amount">$40-60</span>
+                                        <div class="cost-bar" style="width: 70%;"></div>
+                                    </div>
+                                    <div class="cost-item non-vegan">
+                                        <span class="cost-label">Non-Vegan Diet</span>
+                                        <span class="cost-amount">$75-100</span>
+                                        <div class="cost-bar" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cost-category">
+                                <h3>Long-term Healthcare Costs</h3>
+                                <div class="healthcare-savings">
+                                    <div class="savings-card">
+                                        <i class="fas fa-dollar-sign"></i>
+                                        <h4>Potential Savings</h4>
+                                        <p class="savings-amount">$1,200-2,500</p>
+                                        <p class="savings-desc">per year in healthcare costs</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Myths Section -->
+    <section class="myths">
+        <div class="container">
+            <h2 class="section-title">Common Myths Debunked</h2>
+            <div class="myths-grid">
+                <div class="myth-card">
+                    <div class="myth-header">
+                        <i class="fas fa-times-circle myth-icon"></i>
+                        <h3>Myth</h3>
+                    </div>
+                    <p class="myth-text">"Vegans can't get enough protein"</p>
+                    <div class="truth-header">
+                        <i class="fas fa-check-circle truth-icon"></i>
+                        <h3>Truth</h3>
+                    </div>
+                    <p class="truth-text">Plant foods like legumes, nuts, seeds, and grains provide complete proteins. Many vegan athletes excel in their sports.</p>
+                </div>
+                <div class="myth-card">
+                    <div class="myth-header">
+                        <i class="fas fa-times-circle myth-icon"></i>
+                        <h3>Myth</h3>
+                    </div>
+                    <p class="myth-text">"Vegan diets are expensive"</p>
+                    <div class="truth-header">
+                        <i class="fas fa-check-circle truth-icon"></i>
+                        <h3>Truth</h3>
+                    </div>
+                    <p class="truth-text">Staples like beans, rice, potatoes, and seasonal vegetables are among the most affordable foods available.</p>
+                </div>
+                <div class="myth-card">
+                    <div class="myth-header">
+                        <i class="fas fa-times-circle myth-icon"></i>
+                        <h3>Myth</h3>
+                    </div>
+                    <p class="myth-text">"Vegan food is boring"</p>
+                    <div class="truth-header">
+                        <i class="fas fa-check-circle truth-icon"></i>
+                        <h3>Truth</h3>
+                    </div>
+                    <p class="truth-text">Vegan cuisine includes diverse flavors from around the world, with countless creative recipes and cooking techniques.</p>
+                </div>
+                <div class="myth-card">
+                    <div class="myth-header">
+                        <i class="fas fa-times-circle myth-icon"></i>
+                        <h3>Myth</h3>
+                    </div>
+                    <p class="myth-text">"Humans need meat to survive"</p>
+                    <div class="truth-header">
+                        <i class="fas fa-check-circle truth-icon"></i>
+                        <h3>Truth</h3>
+                    </div>
+                    <p class="truth-text">Major health organizations confirm that well-planned vegan diets are nutritionally adequate for all life stages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Getting Started Section -->
+    <section class="getting-started">
+        <div class="container">
+            <h2 class="section-title">Getting Started with Veganism</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Start Gradually</h3>
+                        <p>Begin with "Meatless Mondays" or try replacing one meal per day with a vegan alternative.</p>
+                        <ul>
+                            <li>Try vegan breakfast options</li>
+                            <li>Experiment with plant-based milk</li>
+                            <li>Explore meat substitutes</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Learn About Nutrition</h3>
+                        <p>Understand key nutrients and how to get them from plant sources.</p>
+                        <ul>
+                            <li>Focus on protein-rich foods</li>
+                            <li>Include B12 supplements</li>
+                            <li>Eat a variety of colors</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Stock Your Kitchen</h3>
+                        <p>Fill your pantry with vegan staples and learn new cooking techniques.</p>
+                        <ul>
+                            <li>Legumes and grains</li>
+                            <li>Nuts and seeds</li>
+                            <li>Fresh fruits and vegetables</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Find Community</h3>
+                        <p>Connect with other vegans for support, recipes, and motivation.</p>
+                        <ul>
+                            <li>Join online communities</li>
+                            <li>Attend local meetups</li>
+                            <li>Share your journey</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Vegan Journey?</h2>
+                <p>Join thousands of people who have transformed their health and made a positive impact on the planet.</p>
+                <div class="cta-buttons">
+                    <a href="vegan_recipes.html" class="btn btn-primary">Explore Vegan Recipes</a>
+                    <a href="personalized_plan.html" class="btn btn-outline">Get Meal Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+   <!-- Footer -->
     <footer>
-        <!-- Same footer as index.html -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Heal<span>Space</span></h3>
+                    <p>Your trusted partner in health, wellness, and personal transformation since 2017.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/dipendra.bhatta.244268/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="veganism.html">Veganism</a></li>
+                        <li><a href="fitness.html">Fitness</a></li>
+                        <li><a href="addiction_recovery.html">Recovery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="health_score.html">Health Score</a></li>
+                        <li><a href="habit_tracker.html">Tracker</a></li>
+                        <li><a href="community_forum.html">Community</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@healspace.com</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Wellness St, Health City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HealSpace. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="../js/main.js"></script>
+    <script src="../js/pages/veganism.js"></script>
 </body>
 </html>
