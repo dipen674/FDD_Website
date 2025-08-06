@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(() => {
         currentIndex = (currentIndex < workoutCards.length - 1) ? currentIndex + 1 : 0;
         showWorkout(currentIndex);
-    }, 5000);
+    }, 10000);
 
     // Animation on scroll
     const observer = new IntersectionObserver((entries) => {
