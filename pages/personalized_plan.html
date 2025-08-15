@@ -3,33 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personalized Wellness Plan | HealSpace</title>
+    <title>Personalized Plan | HealSpace</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/personalized_plan.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/personalized_plan.css">
+    <!-- Chart.js for visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Confetti for celebrations -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container">
             <nav class="navbar">
-                <a href="../index.html" class="logo">Heal<span>Space</span></a>
+                <a href="../index.html" class="logo">🏥💚Heal<span>Space</span></a>
                 <ul class="nav-links">
                     <li><a href="../index.html">Home</a></li>
+
+                    <!-- Educational Content Dropdown -->
                     <li class="dropdown">
                         <a href="#" aria-expanded="false" aria-controls="educational-content"><i class="fas fa-book"></i> Educational Content</a>
                         <div class="dropdown-content" id="educational-content">
+                            <!-- Veganism Column -->
                             <div class="dropdown-column">
                                 <h4><i class="fas fa-leaf"></i> Veganism</h4>
                                 <a href="veganism.html">Introduction <span class="badge">Popular</span></a>
                                 <a href="vegan_recipes.html">Recipes</a>
                             </div>
+
+                            <!-- Fitness Column -->
                             <div class="dropdown-column">
                                 <h4><i class="fas fa-running"></i> Fitness</h4>
                                 <a href="fitness.html">Workouts</a>
                                 <a href="workout_plans.html">Plans <span class="badge">New</span></a>
                             </div>
+
+                            <!-- Recovery Column -->
                             <div class="dropdown-column">
                                 <h4><i class="fas fa-hands-helping"></i> Recovery</h4>
                                 <a href="addiction_recovery.html">Guide</a>
@@ -37,6 +48,8 @@
                             </div>
                         </div>
                     </li>
+
+                    <!-- Tools Dropdown -->
                     <li class="dropdown">
                         <a href="#" aria-expanded="false" aria-controls="tools-content"><i class="fas fa-tools"></i> Tools</a>
                         <div class="dropdown-content" id="tools-content">
@@ -49,10 +62,12 @@
                                 <h4><i class="fas fa-check-circle"></i> Assessments</h4>
                                 <a href="self_assessment.html">Self-Assessment</a>
                                 <a href="readiness_assessment.html">Readiness Test</a>
-                                <a href="personalized_plan.html">Personalized Plan</a>
+                                <a href="personalized_plan.html" class="active">Personalized Plan</a>
                             </div>
                         </div>
                     </li>
+
+                    <!-- Community Dropdown -->
                     <li class="dropdown">
                         <a href="#" aria-expanded="false" aria-controls="community-content"><i class="fas fa-users"></i> Community</a>
                         <div class="dropdown-content" id="community-content">
@@ -68,8 +83,9 @@
                             </div>
                         </div>
                     </li>
+
+                    <!-- Blog -->
                     <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
-                    <li><a href="gallery.html"><i class="fas fa-image"></i> Gallery</a></li>
                 </ul>
                 <div class="nav-buttons">
                     <a href="join_community.html" class="btn btn-primary">Join Now</a>
@@ -81,279 +97,270 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="plan-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Your Personalized Wellness Journey</h1>
+                <p>Tailored recommendations based on your self-assessment results. Let's turn insights into action!</p>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-heartbeat"></i>
+                        <div>
+                            <h3>Overall Health</h3>
+                            <span id="overall-percentage">0%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-leaf"></i>
+                        <div>
+                            <h3>Nutrition Score</h3>
+                            <span id="nutrition-percentage">0%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-running"></i>
+                        <div>
+                            <h3>Physical Score</h3>
+                            <span id="physical-percentage">0%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-brain"></i>
+                        <div>
+                            <h3>Mental Score</h3>
+                            <span id="mental-percentage">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Main Content -->
     <main class="page-content">
         <div class="container">
             <div class="content-container">
                 <div class="content-header">
-                    <h1>Your Personalized Wellness Plan</h1>
-                    <p>Customized recommendations based on your assessment results</p>
-                    <div class="plan-summary">
-                        <div class="summary-card">
-                            <i class="fas fa-heartbeat"></i>
-                            <div>
-                                <h3>Overall Progress</h3>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 65%"></div>
-                                </div>
-                                <p>65% Complete</p>
-                            </div>
-                        </div>
-                        <div class="summary-card">
-                            <i class="fas fa-trophy"></i>
-                            <div>
-                                <h3>Current Streak</h3>
-                                <p class="streak">12 days</p>
-                                <p>Keep it up!</p>
-                            </div>
-                        </div>
-                        <div class="summary-card">
-                            <i class="fas fa-calendar-alt"></i>
-                            <div>
-                                <h3>Plan Duration</h3>
-                                <p>30 days</p>
-                                <p>Started: Jun 1, 2025</p>
-                            </div>
-                        </div>
+                    <h2>Customized Wellness Plan</h2>
+                    <p>We've analyzed your assessment results to create this personalized plan. Focus on one area at a time for sustainable change. Track progress and celebrate milestones!</p>
+                    <div class="header-actions">
+                        <button id="print-plan" class="btn btn-outline"><i class="fas fa-print"></i> Print Plan</button>
+                        <button id="share-plan" class="btn btn-outline"><i class="fas fa-share-alt"></i> Share Plan</button>
+                        <button id="regenerate-plan" class="btn btn-outline"><i class="fas fa-sync"></i> Regenerate</button>
                     </div>
-                </div>
-                
-                <div class="plan-tabs">
-                    <button class="tab-btn active" data-tab="nutrition">Nutrition</button>
-                    <button class="tab-btn" data-tab="fitness">Fitness</button>
-                    <button class="tab-btn" data-tab="progress">Progress</button>
                 </div>
                 
                 <div class="plan-container">
-                    <!-- Nutrition Section -->
-                    <div class="plan-section active" id="nutrition">
-                        <h2><i class="fas fa-utensils"></i> Nutrition Goals</h2>
-                        <div class="plan-goals">
-                            <div class="goal-card">
-                                <div class="goal-header">
-                                    <i class="fas fa-carrot"></i>
-                                    <div>
-                                        <h3>Increase Vegetable Intake</h3>
-                                        <p>5+ servings per day</p>
-                                    </div>
-                                    <span class="goal-status complete">Completed</span>
-                                </div>
-                                <div class="goal-details">
-                                    <p><strong>Why this matters:</strong> Vegetables provide essential vitamins, minerals, and fiber that support overall health.</p>
-                                    <ul>
-                                        <li>Include at least 2 servings with lunch and dinner</li>
-                                        <li>Try one new vegetable each week</li>
-                                        <li>Add spinach or kale to your morning smoothie</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="goal-card">
-                                <div class="goal-header">
-                                    <i class="fas fa-tint"></i>
-                                    <div>
-                                        <h3>Hydration</h3>
-                                        <p>2 liters of water daily</p>
-                                    </div>
-                                    <span class="goal-status in-progress">In Progress</span>
-                                </div>
-                                <div class="goal-details">
-                                    <p><strong>Why this matters:</strong> Proper hydration supports digestion, energy levels, and cognitive function.</p>
-                                    <ul>
-                                        <li>Drink a glass of water first thing in the morning</li>
-                                        <li>Carry a reusable water bottle with you</li>
-                                        <li>Set hourly reminders on your phone</li>
-                                    </ul>
-                                    <div class="tracker">
-                                        <p>Your progress: 1.5L / 2L today</p>
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 75%"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="goal-card">
-                                <div class="goal-header">
-                                    <i class="fas fa-apple-alt"></i>
-                                    <div>
-                                        <h3>Reduce Processed Sugar</h3>
-                                        <p>Less than 25g per day</p>
-                                    </div>
-                                    <span class="goal-status not-started">Not Started</span>
-                                </div>
-                                <div class="goal-details">
-                                    <p><strong>Why this matters:</strong> Reducing sugar intake helps maintain stable energy levels and supports weight management.</p>
-                                    <ul>
-                                        <li>Replace sugary snacks with fresh fruit</li>
-                                        <li>Read nutrition labels carefully</li>
-                                        <li>Gradually reduce sugar in your coffee/tea</li>
-                                    </ul>
-                                </div>
-                            </div>
+                    <!-- Overview Chart -->
+                    <div class="plan-section overview">
+                        <h3>Health Overview Dashboard</h3>
+                        <canvas id="healthRadarChart" width="400" height="400"></canvas>
+                        <div class="overview-tips">
+                            <h4>Quick Tips</h4>
+                            <ul>
+                                <li>Start small: Pick one goal from each category this week.</li>
+                                <li>Track daily: Use our habit tracker for consistency.</li>
+                                <li>Seek support: Join community forums for motivation.</li>
+                            </ul>
                         </div>
-                        
-                        <div class="resources">
-                            <h3>Nutrition Resources</h3>
-                            <div class="resource-grid">
-                                <a href="#" class="resource-card">
-                                    <i class="fas fa-book"></i>
-                                    <h4>7-Day Meal Plan</h4>
-                                    <p>Balanced vegetarian meals for beginners</p>
-                                </a>
-                                <a href="#" class="resource-card">
-                                    <i class="fas fa-utensils"></i>
-                                    <h4>Healthy Recipes</h4>
-                                    <p>Quick and nutritious meal ideas</p>
-                                </a>
-                                <a href="#" class="resource-card">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <h4>Grocery List</h4>
-                                    <p>Weekly shopping list for healthy eating</p>
-                                </a>
+                    </div>
+
+                    <!-- Physical Health Plan -->
+                    <div class="plan-section collapsed" id="physical-section">
+                        <div class="section-header">
+                            <i class="fas fa-heartbeat"></i>
+                            <h3>Physical Health Plan</h3>
+                            <span class="section-score" id="physical-score">0%</span>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="section-content">
+                            <p class="section-desc">Build a stronger body with these tailored exercises and routines. Consistency is key to seeing results.</p>
+                            <div class="goals-list">
+                                <!-- Goals will be dynamically added -->
+                            </div>
+                            <div class="resources">
+                                <h4>Recommended Resources</h4>
+                                <ul>
+                                    <li><a href="fitness.html">Fitness Workouts</a></li>
+                                    <li><a href="workout_plans.html">Custom Workout Plans</a></li>
+                                    <li><a href="blog.html?tag=physical">Physical Health Blogs</a></li>
+                                </ul>
+                            </div>
+                            <div class="progress-tracker">
+                                <h4>Section Completion Progress</h4>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="physical-progress" style="width: 0%;"></div>
+                                </div>
+                                <p>Mark goals as complete to update progress. Sync with <a href="habit_tracker.html">Habit Tracker</a>.</p>
+                            </div>
+                            <div class="daily-routine">
+                                <h4>Suggested Daily Routine</h4>
+                                <ul>
+                                    <li>7:00 AM - Morning stretch (10 mins)</li>
+                                    <li>12:00 PM - Quick walk (15 mins)</li>
+                                    <li>8:00 PM - Evening workout (30 mins)</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Fitness Section -->
-                    <div class="plan-section" id="fitness">
-                        <h2><i class="fas fa-running"></i> Fitness Goals</h2>
-                        <div class="plan-goals">
-                            <div class="goal-card">
-                                <div class="goal-header">
-                                    <i class="fas fa-walking"></i>
-                                    <div>
-                                        <h3>Daily Steps</h3>
-                                        <p>10,000 steps per day</p>
-                                    </div>
-                                    <span class="goal-status in-progress">In Progress</span>
-                                </div>
-                                <div class="goal-details">
-                                    <p><strong>Why this matters:</strong> Walking improves cardiovascular health and boosts mood.</p>
-                                    <ul>
-                                        <li>Take short walks during breaks</li>
-                                        <li>Use stairs instead of elevators</li>
-                                        <li>Park farther from destinations</li>
-                                    </ul>
-                                    <div class="tracker">
-                                        <p>Today: 8,245 steps</p>
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 82%"></div>
-                                        </div>
-                                    </div>
-                                </div>
+
+                    <!-- Nutrition Plan -->
+                    <div class="plan-section collapsed" id="nutrition-section">
+                        <div class="section-header">
+                            <i class="fas fa-apple-alt"></i>
+                            <h3>Nutrition Plan</h3>
+                            <span class="section-score" id="nutrition-score">0%</span>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="section-content">
+                            <p class="section-desc">Fuel your body right with balanced, plant-based nutrition. Track meals to stay on course.</p>
+                            <div class="goals-list">
+                                <!-- Goals will be dynamically added -->
                             </div>
-                            
-                            <div class="goal-card">
-                                <div class="goal-header">
-                                    <i class="fas fa-dumbbell"></i>
-                                    <div>
-                                        <h3>Strength Training</h3>
-                                        <p>3 sessions per week</p>
-                                    </div>
-                                    <span class="goal-status complete">Completed</span>
+                            <div class="resources">
+                                <h4>Recommended Resources</h4>
+                                <ul>
+                                    <li><a href="veganism.html">Veganism Guide</a></li>
+                                    <li><a href="vegan_recipes.html">Healthy Recipes</a></li>
+                                    <li><a href="blog.html?tag=nutrition">Nutrition Articles</a></li>
+                                </ul>
+                            </div>
+                            <div class="progress-tracker">
+                                <h4>Section Completion Progress</h4>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="nutrition-progress" style="width: 0%;"></div>
                                 </div>
-                                <div class="goal-details">
-                                    <p><strong>Why this matters:</strong> Strength training builds muscle, boosts metabolism, and improves bone density.</p>
-                                    <ul>
-                                        <li>Focus on major muscle groups</li>
-                                        <li>Start with bodyweight exercises</li>
-                                        <li>Gradually increase resistance</li>
-                                    </ul>
-                                    <div class="workout-schedule">
-                                        <h4>This Week's Schedule</h4>
-                                        <div class="schedule-days">
-                                            <div class="day completed">Mon: Upper Body</div>
-                                            <div class="day completed">Wed: Lower Body</div>
-                                            <div class="day upcoming">Fri: Full Body</div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p>Mark goals as complete to update progress. Sync with <a href="habit_tracker.html">Habit Tracker</a>.</p>
+                            </div>
+                            <div class="daily-routine">
+                                <h4>Suggested Meal Plan</h4>
+                                <ul>
+                                    <li>Breakfast: Oatmeal with fruits</li>
+                                    <li>Lunch: Veggie stir-fry</li>
+                                    <li>Dinner: Lentil soup</li>
+                                    <li>Snacks: Nuts and apples</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Progress Section -->
-                    <div class="plan-section" id="progress">
-                        <h2><i class="fas fa-chart-line"></i> Your Progress</h2>
-                        <div class="progress-metrics">
-                            <div class="metric-card">
-                                <h3>Consistency</h3>
-                                <div class="metric-value">82%</div>
-                                <p>Plan adherence</p>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 82%"></div>
-                                </div>
+
+                    <!-- Mental Well-being Plan -->
+                    <div class="plan-section collapsed" id="mental-section">
+                        <div class="section-header">
+                            <i class="fas fa-brain"></i>
+                            <h3>Mental Well-being Plan</h3>
+                            <span class="section-score" id="mental-score">0%</span>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="section-content">
+                            <p class="section-desc">Nurture your mind with practices for stress relief and emotional balance. Small daily habits make a big difference.</p>
+                            <div class="goals-list">
+                                <!-- Goals will be dynamically added -->
                             </div>
-                            <div class="metric-card">
-                                <h3>Goals Completed</h3>
-                                <div class="metric-value">7/12</div>
-                                <p>Milestones achieved</p>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 58%"></div>
-                                </div>
+                            <div class="resources">
+                                <h4>Recommended Resources</h4>
+                                <ul>
+                                    <li><a href="addiction_recovery.html">Recovery Guide</a></li>
+                                    <li><a href="recovery_resources.html">Support Resources</a></li>
+                                    <li><a href="blog.html?tag=mental">Mental Health Tips</a></li>
+                                </ul>
                             </div>
-                            <div class="metric-card">
-                                <h3>Days Remaining</h3>
-                                <div class="metric-value">18</div>
-                                <p>Until plan completion</p>
+                            <div class="progress-tracker">
+                                <h4>Section Completion Progress</h4>
                                 <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 40%"></div>
+                                    <div class="progress-fill" id="mental-progress" style="width: 0%;"></div>
                                 </div>
+                                <p>Mark goals as complete to update progress. Sync with <a href="habit_tracker.html">Habit Tracker</a>.</p>
+                            </div>
+                            <div class="daily-routine">
+                                <h4>Daily Mindfulness Routine</h4>
+                                <ul>
+                                    <li>Morning: 5-min meditation</li>
+                                    <li>Afternoon: Gratitude journaling</li>
+                                    <li>Evening: Deep breathing exercises</li>
+                                </ul>
                             </div>
                         </div>
-                        
-                        <div class="progress-charts">
-                            <div class="chart-container">
-                                <h3>Weekly Progress</h3>
-                                <canvas id="weeklyChart"></canvas>
+                    </div>
+
+                    <!-- Lifestyle Habits Plan -->
+                    <div class="plan-section collapsed" id="lifestyle-section">
+                        <div class="section-header">
+                            <i class="fas fa-hands-helping"></i>
+                            <h3>Lifestyle Habits Plan</h3>
+                            <span class="section-score" id="lifestyle-score">0%</span>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="section-content">
+                            <p class="section-desc">Transform daily habits for a balanced life. Focus on sustainable changes for long-term success.</p>
+                            <div class="goals-list">
+                                <!-- Goals will be dynamically added -->
                             </div>
-                            <div class="chart-container">
-                                <h3>Goal Completion</h3>
-                                <canvas id="goalsChart"></canvas>
+                            <div class="resources">
+                                <h4>Recommended Resources</h4>
+                                <ul>
+                                    <li><a href="community_forum.html">Join Forum Discussions</a></li>
+                                    <li><a href="events.html">Upcoming Events</a></li>
+                                    <li><a href="blog.html?tag=lifestyle">Lifestyle Blogs</a></li>
+                                </ul>
+                            </div>
+                            <div class="progress-tracker">
+                                <h4>Section Completion Progress</h4>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="lifestyle-progress" style="width: 0%;"></div>
+                                </div>
+                                <p>Mark goals as complete to update progress. Sync with <a href="habit_tracker.html">Habit Tracker</a>.</p>
+                            </div>
+                            <div class="daily-routine">
+                                <h4>Weekly Lifestyle Check</h4>
+                                <ul>
+                                    <li>Monday: Screen time review</li>
+                                    <li>Wednesday: Social connection</li>
+                                    <li>Friday: Habit reflection</li>
+                                </ul>
                             </div>
                         </div>
-                        
-                        <div class="achievements">
-                            <h3>Your Achievements</h3>
-                            <div class="badges">
-                                <div class="badge">
-                                    <i class="fas fa-medal"></i>
-                                    <p>7-Day Streak</p>
-                                </div>
-                                <div class="badge">
-                                    <i class="fas fa-seedling"></i>
-                                    <p>Veggie Master</p>
-                                </div>
-                                <div class="badge">
-                                    <i class="fas fa-water"></i>
-                                    <p>Hydration Hero</p>
-                                </div>
-                                <div class="badge">
-                                    <i class="fas fa-dumbbell"></i>
-                                    <p>Strength Starter</p>
-                                </div>
+                    </div>
+
+                    <!-- 30-Day Challenge Section -->
+                    <div class="plan-section challenge">
+                        <h3>30-Day Transformation Challenge</h3>
+                        <p>Commit to this structured challenge to kickstart your progress. Track daily and share updates in the community!</p>
+                        <div class="challenge-timeline">
+                            <div class="timeline-item">
+                                <div class="day">Week 1</div>
+                                <p>Focus on basics: Establish routines</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="day">Week 2</div>
+                                <p>Build momentum: Add intensity</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="day">Week 3</div>
+                                <p>Overcome hurdles: Adjust as needed</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="day">Week 4</div>
+                                <p>Celebrate wins: Review and plan ahead</p>
                             </div>
                         </div>
+                        <button id="join-challenge" class="btn btn-primary">Join Challenge</button>
                     </div>
                 </div>
-                
-                <div class="plan-actions">
-                    <button class="btn btn-outline">
-                        <i class="fas fa-print"></i> Print Plan
-                    </button>
-                    <button class="btn btn-primary">
-                        <i class="fas fa-sync-alt"></i> Update Progress
-                    </button>
-                    <button class="btn btn-secondary">
-                        <i class="fas fa-share-alt"></i> Share with Coach
-                    </button>
+
+                <!-- No Data Message (hidden by default) -->
+                <div id="no-data-message" style="display: none; text-align: center; padding: 40px; background: var(--light); border-radius: var(--radius);">
+                    <i class="fas fa-info-circle" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
+                    <h2>No Assessment Data Found</h2>
+                    <p>To get your personalized plan, please complete the self-assessment first.</p>
+                    <a href="self_assessment.html" class="btn btn-primary">Take Self-Assessment Now</a>
                 </div>
             </div>
         </div>
     </main>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -371,20 +378,20 @@
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="pages/veganism.html">Veganism</a></li>
-                        <li><a href="pages/fitness.html">Fitness</a></li>
-                        <li><a href="pages/addiction_recovery.html">Recovery</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="veganism.html">Veganism</a></li>
+                        <li><a href="fitness.html">Fitness</a></li>
+                        <li><a href="addiction_recovery.html">Recovery</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="pages/health_score.html">Health Score</a></li>
-                        <li><a href="pages/habit_tracker.html">Tracker</a></li>
-                        <li><a href="pages/community_forum.html">Community</a></li>
-                        <li><a href="pages/blog.html">Blog</a></li>
+                        <li><a href="health_score.html">Health Score</a></li>
+                        <li><a href="habit_tracker.html">Tracker</a></li>
+                        <li><a href="community_forum.html">Community</a></li>
+                        <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </div>
 
@@ -401,15 +408,24 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 healspace. All rights reserved.</p>
                 <div class="footer-links">
-                    <a href="pages/privacy_policy.html">Privacy Policy</a>
+                    <a href="privacy_policy.html">Privacy Policy</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Goal Detail Modal -->
+    <div id="goal-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-desc"></p>
+            <div id="modal-steps"></div>
+            <button id="mark-complete" class="btn btn-primary">Mark as Complete</button>
+        </div>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/main.js"></script>
     <script src="../js/pages/personalized_plan.js"></script>
-     <script src="../js/main.js"></script>
 </body>
 </html>

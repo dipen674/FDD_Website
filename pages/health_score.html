@@ -5,8 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Score - HealSpace</title>
     <link rel="stylesheet" href="../css/health_score.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+     <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">🏥💚Heal<span>Space</span></a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+
+                    <!-- Educational Content Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="educational-content"><i class="fas fa-book"></i> Educational Content</a>
+                        <div class="dropdown-content" id="educational-content">
+                            <!-- Veganism Column -->
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-leaf"></i> Veganism</h4>
+                                <a href="veganism.html">Introduction <span class="badge">Popular</span></a>
+                                <a href="vegan_recipes.html">Recipes</a>
+                            </div>
+
+                            <!-- Fitness Column -->
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-running"></i> Fitness</h4>
+                                <a href="fitness.html">Workouts</a>
+                                <a href="workout_plans.html">Plans <span class="badge">New</span></a>
+                            </div>
+
+                            <!-- Recovery Column -->
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-hands-helping"></i> Recovery</h4>
+                                <a href="addiction_recovery.html">Guide</a>
+                                <a href="recovery_resources.html">Resources</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Tools Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="tools-content"><i class="fas fa-tools"></i> Tools</a>
+                        <div class="dropdown-content" id="tools-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-chart-line"></i> Health Tracking</h4>
+                                <a href="health_score.html">Health Score</a>
+                                <a href="habit_tracker.html">Habit Tracker</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-check-circle"></i> Assessments</h4>
+                                <a href="self_assessment.html" class="active">Self-Assessment</a>
+                                <a href="readiness_assessment.html">Readiness Test</a>
+                                <a href="personalized_plan.html">Personalized Plan</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Community Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="community-content"><i class="fas fa-users"></i> Community</a>
+                        <div class="dropdown-content" id="community-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-comments"></i> Engagement</h4>
+                                <a href="community_forum.html">Forum</a>
+                                <a href="events.html">Events</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-user-plus"></i> Participation</h4>
+                                <a href="expert_qa.html">Expert Q&A</a>
+                                <a href="join_community.html">Join Us</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Blog -->
+                    <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="join_community.html" class="btn btn-primary">Join Now</a>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
     <!-- Main Content Area -->
     <main class="health-score-container">
         <!-- Overall Health Score Section -->
@@ -209,6 +292,60 @@
         </section>
     </main>
 
+<footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>🏥💚Heal<span>space</span></h3>
+                    <p>Your trusted partner in health, wellness, and personal transformation since 2020.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/dipendra.bhatta.244268/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/veganism.html">Veganism</a></li>
+                        <li><a href="pages/fitness.html">Fitness</a></li>
+                        <li><a href="pages/addiction_recovery.html">Recovery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="pages/health_score.html">Health Score</a></li>
+                        <li><a href="pages/habit_tracker.html">Tracker</a></li>
+                        <li><a href="pages/community_forum.html">Community</a></li>
+                        <li><a href="pages/blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> healthspace2020@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> 9860038245</li>
+                        <li><i class="fas fa-map-marker-alt"></i>Maitidevi, Kathmandu</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 healspace. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="pages/privacy_policy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="../js/pages/health_score.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
