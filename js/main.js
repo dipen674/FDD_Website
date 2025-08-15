@@ -1,4 +1,23 @@
-document.addEventListener('DOMContentLoaded', function() {
+async function loadComponent(elementId, filePath) {
+    console.log(`Attempting to load ${filePath} into ${elementId}`);
+    try {
+        const response = await fetch(filePath);
+        console.log(`Fetch response for ${filePath}:`, response.status);
+        if (!response.ok) throw new Error(`Failed to load ${filePath}`);
+        const content = await response.text();
+        console.log(`Content loaded for ${filePath}:`, content);
+        document.getElementById(elementId).innerHTML = content;
+    } catch (error) {
+        console.error('Error loading component:', error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', async function() {
+    // Load header and footer first
+    console.log('DOM loaded, fetching components');
+    await loadComponent('header', '/components/header.html');
+    await loadComponent('footer', '/components/footer.html');
+
     // Set active navigation link based on current page
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-links a');
@@ -117,25 +136,4 @@ document.addEventListener('DOMContentLoaded', function() {
             location.reload(); // Reload to reapply correct event listeners
         }
     });
-});
-
-
-
-//File loaf=der function
-
-// js/components.js
-async function loadComponent(elementId, filePath) {
-    try {
-        const response = await fetch(filePath);
-        if (!response.ok) throw new Error(`Failed to load ${filePath}`);
-        const content = await response.text();
-        document.getElementById(elementId).innerHTML = content;
-    } catch (error) {
-        console.error('Error loading component:', error);
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    loadComponent('header', '../components/footer.html');
-    loadComponent('footer', '../components/footer.html');
 });

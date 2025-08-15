@@ -96,9 +96,6 @@
 }
 
 .programs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
     position: relative;
     z-index: 1;
 }
@@ -175,9 +172,6 @@
 }
 
 .quiz-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
     position: relative;
     z-index: 1;
 }
@@ -264,9 +258,7 @@
 }
 
 .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
+    position: relative;
 }
 
 .feature-card {
@@ -405,7 +397,7 @@
     left: 0;
 }
 
-.tab-btn.active, 
+.tab-btn.active,
 .tab-btn:hover {
     color: white;
     transform: translateY(-2px);
@@ -424,9 +416,7 @@
 }
 
 .blog-grid, .events-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
+    position: relative;
 }
 
 .blog-card, .event-card {
@@ -640,9 +630,7 @@
 }
 
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    position: relative;
     margin-bottom: 30px;
 }
 
@@ -920,7 +908,6 @@
     .programs-grid,
     .quiz-grid,
     .features-grid {
-        grid-template-columns: 1fr;
         gap: 30px;
     }
     
@@ -970,7 +957,6 @@
     }
     
     .gallery-grid {
-        grid-template-columns: 1fr;
         gap: 20px;
     }
     
