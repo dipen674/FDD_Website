@@ -1,15 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Readiness Assessment | lbef</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Change Readiness Assessment | HealSpace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/readiness_assessment.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
+    <!-- Header -->
     <header>
-        <!-- Same header as index.html -->
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">🏥💚Heal<span>Space</span></a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+
+                    <!-- Educational Content Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="educational-content"><i
+                                class="fas fa-book"></i> Educational Content</a>
+                        <div class="dropdown-content" id="educational-content">
+                            <!-- Veganism Column -->
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-leaf"></i> Veganism</h4>
+                                <a href="veganism.html">Introduction <span class="badge">Popular</span></a>
+                                <a href="vegan_recipes.html">Recipes</a>
+                            </div>
+
+                            <!-- Fitness Column -->
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-running"></i> Fitness</h4>
+                                <a href="fitness.html">Workouts</a>
+                                <a href="workout_plans.html">Plans <span class="badge">New</span></a>
+                            </div>
+
+                            <!-- Recovery Column -->
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-hands-helping"></i> Recovery</h4>
+                                <a href="addiction_recovery.html">Guide</a>
+                                <a href="recovery_resources.html">Resources</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Tools Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="tools-content"><i class="fas fa-tools"></i>
+                            Tools</a>
+                        <div class="dropdown-content" id="tools-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-chart-line"></i> Health Tracking</h4>
+                                <a href="health_score.html">Health Score</a>
+                                <a href="habit_tracker.html">Habit Tracker</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-check-circle"></i> Assessments</h4>
+                                <a href="self_assessment.html">Self-Assessment</a>
+                                <a href="readiness_assessment.html">Readiness Test</a>
+                                <a href="personalized_plan.html">Personalized Plan</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Community Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="community-content"><i class="fas fa-users"></i>
+                            Community</a>
+                        <div class="dropdown-content" id="community-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-comments"></i> Engagement</h4>
+                                <a href="community_forum.html">Forum</a>
+                                <a href="events.html">Events</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-user-plus"></i> Participation</h4>
+                                <a href="expert_qa.html">Expert Q&A</a>
+                                <a href="join_community.html">Join Us</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Blog -->
+                    <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="join_community.html" class="btn btn-primary">Join Now</a>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main class="page-content">
@@ -27,18 +115,519 @@
                 <div class="assessment-steps">
                     <div class="step-card">
                         <h3><i class="fas fa-check-circle"></i> Step 1: Answer Questions</h3>
-                        <p>Complete the 10-question assessment about your current habits and mindset.</p>
+                        <p>Complete the 15-question assessment about your current habits and mindset.</p>
                     </div>
-                    <!-- More steps -->
+                    
+                    <div class="step-card">
+                        <h3><i class="fas fa-chart-bar"></i> Step 2: Get Your Score</h3>
+                        <p>Receive your readiness score and understand what it means for your journey.</p>
+                    </div>
+                    
+                    <div class="step-card">
+                        <h3><i class="fas fa-lightbulb"></i> Step 3: Personalized Tips</h3>
+                        <p>Get customized recommendations based on your readiness level.</p>
+                    </div>
+                </div>
+
+                <!-- Assessment Form -->
+                <div class="assessment-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                        <span class="progress-text" id="progressText">Question 1 of 15</span>
+                    </div>
+
+                    <form id="readinessAssessment" class="assessment-form">
+                        <!-- Question 1 -->
+                        <div class="question-card active" data-question="1">
+                            <h3>How important is changing your health habits to you right now?</h3>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="q1" value="1">
+                                    <span>Not important at all</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q1" value="2">
+                                    <span>Slightly important</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q1" value="3">
+                                    <span>Moderately important</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q1" value="4">
+                                    <span>Very important</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q1" value="5">
+                                    <span>Extremely important</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 2 -->
+                        <div class="question-card" data-question="2">
+                            <h3>How confident are you in your ability to make lasting changes?</h3>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="q2" value="1">
+                                    <span>Not confident at all</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q2" value="2">
+                                    <span>Slightly confident</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q2" value="3">
+                                    <span>Moderately confident</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q2" value="4">
+                                    <span>Very confident</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q2" value="5">
+                                    <span>Extremely confident</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 3 -->
+                        <div class="question-card" data-question="3">
+                            <h3>How ready are you to start making changes today?</h3>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="q3" value="1">
+                                    <span>Not ready</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q3" value="2">
+                                    <span>Thinking about it</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q3" value="3">
+                                    <span>Planning to start soon</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q3" value="4">
+                                    <span>Ready to start</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q3" value="5">
+                                    <span>Already taking action</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 4 -->
+                        <div class="question-card" data-question="4">
+                            <h3>How much do you believe changing your habits will improve your life?</h3>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="q4" value="1">
+                                    <span>Not at all</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q4" value="2">
+                                    <span>A little</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q4" value="3">
+                                    <span>Moderately</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q4" value="4">
+                                    <span>Significantly</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q4" value="5">
+                                    <span>Life-changing</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 5 -->
+                        <div class="question-card" data-question="5">
+                            <h3>How supportive is your social environment for healthy changes?</h3>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="q5" value="1">
+                                    <span>Very unsupportive</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q5" value="2">
+                                    <span>Somewhat unsupportive</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q5" value="3">
+                                    <span>Neutral</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q5" value="4">
+                                    <span>Somewhat supportive</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q5" value="5">
+                                    <span>Very supportive</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 6 -->
+                        <div class="question-card" data-question="6">
+                            <h3>How often have you successfully made health-related changes in the past?</h3>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="q6" value="1">
+                                    <span>Never</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q6" value="2">
+                                    <span>Rarely</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q6" value="3">
+                                    <span>Sometimes</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q6" value="4">
+                                    <span>Often</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q6" value="5">
+                                    <span>Always</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 7 -->
+                        <div class="question-card" data-question="7">
+                            <h3>How stressed do you feel about your current health habits?</h3>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="q7" value="5">
+                                    <span>Not stressed at all</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q7" value="4">
+                                    <span>Slightly stressed</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q7" value="3">
+                                    <span>Moderately stressed</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q7" value="2">
+                                    <span>Very stressed</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q7" value="1">
+                                    <span>Extremely stressed</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 8 -->
+                        <div class="question-card" data-question="8">
+                            <h3>How much time can you realistically dedicate to health changes daily?</h3>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="q8" value="1">
+                                    <span>No time</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q8" value="2">
+                                    <span>15-30 minutes</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q8" value="3">
+                                    <span>30-60 minutes</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q8" value="4">
+                                    <span>1-2 hours</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q8" value="5">
+                                    <span>2+ hours</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 9 -->
+                        <div class="question-card" data-question="9">
+                            <h3>How clearly can you visualize your health goals?</h3>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="q9" value="1">
+                                    <span>Not at all clear</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q9" value="2">
+                                    <span>Somewhat unclear</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q9" value="3">
+                                    <span>Moderately clear</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q9" value="4">
+                                    <span>Very clear</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q9" value="5">
+                                    <span>Crystal clear</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 10 -->
+                        <div class="question-card" data-question="10">
+                            <h3>How motivated do you feel when you think about improving your health?</h3>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="q10" value="1">
+                                    <span>Not motivated</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q10" value="2">
+                                    <span>Slightly motivated</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q10" value="3">
+                                    <span>Moderately motivated</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q10" value="4">
+                                    <span>Very motivated</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q10" value="5">
+                                    <span>Extremely motivated</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 11 -->
+                        <div class="question-card" data-question="11">
+                            <h3>How often do you currently engage in healthy behaviors?</h3>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="q11" value="1">
+                                    <span>Never</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q11" value="2">
+                                    <span>Rarely (1-2 times/week)</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q11" value="3">
+                                    <span>Sometimes (3-4 times/week)</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q11" value="4">
+                                    <span>Often (5-6 times/week)</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q11" value="5">
+                                    <span>Daily</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 12 -->
+                        <div class="question-card" data-question="12">
+                            <h3>How do you typically handle setbacks or challenges?</h3>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="q12" value="1">
+                                    <span>Give up completely</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q12" value="2">
+                                    <span>Take a long break</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q12" value="3">
+                                    <span>Restart after some time</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q12" value="4">
+                                    <span>Keep trying with adjustments</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q12" value="5">
+                                    <span>Learn and bounce back quickly</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 13 -->
+                        <div class="question-card" data-question="13">
+                            <h3>How much knowledge do you have about healthy lifestyle practices?</h3>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="q13" value="1">
+                                    <span>Very little</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q13" value="2">
+                                    <span>Basic knowledge</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q13" value="3">
+                                    <span>Moderate knowledge</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q13" value="4">
+                                    <span>Good knowledge</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q13" value="5">
+                                    <span>Extensive knowledge</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 14 -->
+                        <div class="question-card" data-question="14">
+                            <h3>How willing are you to seek help or support when needed?</h3>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="q14" value="1">
+                                    <span>Not willing at all</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q14" value="2">
+                                    <span>Somewhat unwilling</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q14" value="3">
+                                    <span>Neutral</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q14" value="4">
+                                    <span>Somewhat willing</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q14" value="5">
+                                    <span>Very willing</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 15 -->
+                        <div class="question-card" data-question="15">
+                            <h3>How much do current health issues affect your daily life?</h3>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="q15" value="5">
+                                    <span>Not at all</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q15" value="4">
+                                    <span>Slightly</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q15" value="3">
+                                    <span>Moderately</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q15" value="2">
+                                    <span>Significantly</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q15" value="1">
+                                    <span>Severely</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" id="prevBtn" class="btn btn-outline" disabled>Previous</button>
+                            <button type="button" id="nextBtn" class="btn btn-primary">Next</button>
+                            <button type="submit" id="submitBtn" class="btn btn-primary" style="display: none;">Get Results</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Results Section -->
+                <div class="results-container" id="resultsContainer" style="display: none;">
+                    <div class="results-header">
+                        <h2>Your Change Readiness Score</h2>
+                        <div class="score-display" id="scoreDisplay"></div>
+                    </div>
+
+                    <div class="results-content">
+                        <div class="readiness-level" id="readinessLevel"></div>
+                        <div class="recommendations" id="recommendations"></div>
+                        <div class="next-steps" id="nextSteps"></div>
+                    </div>
+
+                    <div class="results-actions">
+                        <button type="button" id="retakeBtn" class="btn btn-outline">Retake Assessment</button>
+                        <a href="personalized_plan.html" class="btn btn-primary">Get Personalized Plan</a>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <!-- Same footer as index.html -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>🏥💚Heal<span>Space</span></h3>
+                    <p>Your trusted partner in health, wellness, and personal transformation since 2024.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/dipendra.bhatta.244268/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="veganism.html">Veganism</a></li>
+                        <li><a href="fitness.html">Fitness</a></li>
+                        <li><a href="addiction_recovery.html">Recovery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="health_score.html">Health Score</a></li>
+                        <li><a href="habit_tracker.html">Tracker</a></li>
+                        <li><a href="community_forum.html">Community</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@healspace.com</li>
+                        <li><i class="fas fa-phone"></i> 9860038245</li>
+                        <li><i class="fas fa-map-marker-alt"></i>Miatidevi, Kathmandu</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 HealSpace. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy_policy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <script src="../js/pages/quiz.js"></script>
     <script src="../js/main.js"></script>
 </body>
+
 </html>

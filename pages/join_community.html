@@ -1,42 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Our Community | lbef</title>
+    <title>Join Our Community | HealSpace ✨</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/join.css">
 </head>
+
 <body>
+    <!-- Header -->
     <header>
-        <!-- Same header as index.html -->
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">🏥💚Heal<span>Space</span></a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+
+                    <!-- Educational Content Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="educational-content"><i
+                                class="fas fa-book"></i> Educational Content</a>
+                        <div class="dropdown-content" id="educational-content">
+                            <!-- Veganism Column -->
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-leaf"></i> Veganism</h4>
+                                <a href="veganism.html">Introduction <span class="badge">Popular</span></a>
+                                <a href="vegan_recipes.html">Recipes</a>
+                            </div>
+
+                            <!-- Fitness Column -->
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-running"></i> Fitness</h4>
+                                <a href="fitness.html">Workouts</a>
+                                <a href="workout_plans.html">Plans <span class="badge">New</span></a>
+                            </div>
+
+                            <!-- Recovery Column -->
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-hands-helping"></i> Recovery</h4>
+                                <a href="addiction_recovery.html">Guide</a>
+                                <a href="recovery_resources.html">Resources</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Tools Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="tools-content"><i class="fas fa-tools"></i>
+                            Tools</a>
+                        <div class="dropdown-content" id="tools-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-chart-line"></i> Health Tracking</h4>
+                                <a href="health_score.html">Health Score</a>
+                                <a href="habit_tracker.html">Habit Tracker</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-check-circle"></i> Assessments</h4>
+                                <a href="self_assessment.html">Self-Assessment</a>
+                                <a href="readiness_assessment.html">Readiness Test</a>
+                                <a href="personalized_plan.html">Personalized Plan</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Community Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="community-content"><i class="fas fa-users"></i>
+                            Community</a>
+                        <div class="dropdown-content" id="community-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-comments"></i> Engagement</h4>
+                                <a href="community_forum.html">Forum</a>
+                                <a href="events.html">Events</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-user-plus"></i> Participation</h4>
+                                <a href="expert_qa.html">Expert Q&A</a>
+                                <a href="join_community.html">Join Us</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Blog -->
+                    <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="join_community.html" class="btn btn-primary active">Join Now</a>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <main class="page-content">
+    <!-- Hero Section
+    <section class="join-hero">
         <div class="container">
-            <div class="content-container">
-                <div class="content-header">
-                    <h1>Join Our Community</h1>
-                    <p>Start your wellness journey today</p>
-                </div>
-                
-                <form class="signup-form">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" required>
+            <h1>Join Our Wellness Community</h1>
+            <p>Start your transformative health journey today with personalized support, expert guidance, and a community that cares about your success.</p>
+        </div>
+    </section> -->
+
+    <!-- Main Content -->
+    <section class="join-main">
+        <div class="join-container">
+            <div class="signup-wrapper">
+                <!-- Benefits Section -->
+                <div class="signup-info">
+                    <h2>Why Join HealSpace?</h2>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check-circle"></i> Personalized health and wellness plans</li>
+                        <li><i class="fas fa-check-circle"></i> Expert-led fitness and nutrition programs</li>
+                        <li><i class="fas fa-check-circle"></i> Supportive community forum</li>
+                        <li><i class="fas fa-check-circle"></i> Progress tracking tools</li>
+                        <li><i class="fas fa-check-circle"></i> Weekly expert Q&A sessions</li>
+                        <li><i class="fas fa-check-circle"></i> Exclusive recipes and workout plans</li>
+                        <li><i class="fas fa-check-circle"></i> 24/7 community support</li>
+                        <li><i class="fas fa-check-circle"></i> Recovery assistance programs</li>
+                    </ul>
+
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h3>5,000+</h3>
+                            <p>Active Members</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>98%</h3>
+                            <p>Success Rate</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>24/7</h3>
+                            <p>Community Support</p>
+                        </div>
                     </div>
-                    <!-- More form fields -->
-                    <button type="submit" class="btn btn-primary">Sign Up</button>
-                </form>
+                </div>
+
+                <!-- Signup Form -->
+                <div class="signup-form-container">
+                    <form class="signup-form" id="signupForm">
+                        <h2>Create Your Account</h2>
+                        <p class="form-subtitle">Join thousands of members on their wellness journey</p>
+
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                            <span class="error-message" id="fullNameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <select id="age" name="age" required>
+                                <option value="">Select your age range</option>
+                                <option value="18-25">18-25</option>
+                                <option value="26-35">26-35</option>
+                                <option value="36-45">36-45</option>
+                                <option value="46-55">46-55</option>
+                                <option value="56+">56+</option>
+                            </select>
+                            <span class="error-message" id="ageError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" name="location" placeholder="City, Province" required>
+                            <span class="error-message" id="locationError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interests">Primary Health Goals (Select all that apply)</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="weight-loss">
+                                    <span class="checkmark"></span>
+                                    Weight Management
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="fitness">
+                                    <span class="checkmark"></span>
+                                    Fitness Training
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="nutrition">
+                                    <span class="checkmark"></span>
+                                    Plant-Based Nutrition
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="recovery">
+                                    <span class="checkmark"></span>
+                                    Addiction Recovery
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="mental-health">
+                                    <span class="checkmark"></span>
+                                    Mental Wellness
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="community">
+                                    <span class="checkmark"></span>
+                                    Community Support
+                                </label>
+                            </div>
+                            <span class="error-message" id="interestsError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="password-input">
+                                <input type="password" id="password" name="password" required>
+                                <button type="button" class="password-toggle" id="passwordToggle">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="password-strength" id="passwordStrength"></div>
+                            <span class="error-message" id="passwordError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            <span class="error-message" id="confirmPasswordError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="terms" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="privacy_policy.html" target="_blank">Terms of Service and Privacy Policy</a>
+                            </label>
+                            <span class="error-message" id="termsError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter">
+                                <span class="checkmark"></span>
+                                Subscribe to our weekly wellness newsletter
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-signup">
+                            <span class="btn-text">Create My Account</span>
+                            <span class="btn-loading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Creating Account...
+                            </span>
+                        </button>
+
+                        <div class="form-footer">
+                            <p>Already have an account? <a href="#" class="login-link">Sign In</a></p>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </main>
+    </section>
 
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="fas fa-check-circle"></i>
+                <h3>Welcome to HealSpace!</h3>
+            </div>
+            <div class="modal-body">
+                <p>Your account has been created successfully. Get ready to start your wellness journey!</p>
+                <div class="next-steps">
+                    <h4>What's Next?</h4>
+                    <ul>
+                        <li><i class="fas fa-user-cog"></i> Complete your profile</li>
+                        <li><i class="fas fa-clipboard-check"></i> Take our health assessment</li>
+                        <li><i class="fas fa-users"></i> Join community discussions</li>
+                        <li><i class="fas fa-calendar"></i> Explore upcoming events</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="redirectToProfile()">Get Started</button>
+                <button class="btn btn-outline" onclick="closeModal()">Explore Community</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <!-- Same footer as index.html -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>🏥💚Heal<span>Space</span></h3>
+                    <p>Your trusted partner in health, wellness, and personal transformation since 2024.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/dipendra.bhatta.244268/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="veganism.html">Veganism</a></li>
+                        <li><a href="fitness.html">Fitness</a></li>
+                        <li><a href="addiction_recovery.html">Recovery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="health_score.html">Health Score</a></li>
+                        <li><a href="habit_tracker.html">Tracker</a></li>
+                        <li><a href="community_forum.html">Community</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@healspace.com</li>
+                        <li><i class="fas fa-phone"></i> 9860038245</li>
+                        <li><i class="fas fa-map-marker-alt"></i>Miatidevi, Kathmandu</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 HealSpace. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy_policy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="../js/main.js"></script>
-    <script src="../js/signup.js"></script>
+    <script src="../js/pages/signup.js"></script>
 </body>
+
 </html>

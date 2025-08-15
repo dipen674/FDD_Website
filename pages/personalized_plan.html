@@ -3,44 +3,413 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personalized Plan | lbef</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Personalized Wellness Plan | HealSpace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/personalized_plan.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <!-- Same header as index.html -->
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">Heal<span>Space</span></a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="educational-content"><i class="fas fa-book"></i> Educational Content</a>
+                        <div class="dropdown-content" id="educational-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-leaf"></i> Veganism</h4>
+                                <a href="veganism.html">Introduction <span class="badge">Popular</span></a>
+                                <a href="vegan_recipes.html">Recipes</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-running"></i> Fitness</h4>
+                                <a href="fitness.html">Workouts</a>
+                                <a href="workout_plans.html">Plans <span class="badge">New</span></a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-hands-helping"></i> Recovery</h4>
+                                <a href="addiction_recovery.html">Guide</a>
+                                <a href="recovery_resources.html">Resources</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="tools-content"><i class="fas fa-tools"></i> Tools</a>
+                        <div class="dropdown-content" id="tools-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-chart-line"></i> Health Tracking</h4>
+                                <a href="health_score.html">Health Score</a>
+                                <a href="habit_tracker.html">Habit Tracker</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-check-circle"></i> Assessments</h4>
+                                <a href="self_assessment.html">Self-Assessment</a>
+                                <a href="readiness_assessment.html">Readiness Test</a>
+                                <a href="personalized_plan.html">Personalized Plan</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="community-content"><i class="fas fa-users"></i> Community</a>
+                        <div class="dropdown-content" id="community-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-comments"></i> Engagement</h4>
+                                <a href="community_forum.html">Forum</a>
+                                <a href="events.html">Events</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-user-plus"></i> Participation</h4>
+                                <a href="expert_qa.html">Expert Q&A</a>
+                                <a href="join_community.html">Join Us</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-image"></i> Gallery</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="join_community.html" class="btn btn-primary">Join Now</a>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
+
 
     <main class="page-content">
         <div class="container">
             <div class="content-container">
                 <div class="content-header">
                     <h1>Your Personalized Wellness Plan</h1>
-                    <p>Customized recommendations based on your assessment</p>
+                    <p>Customized recommendations based on your assessment results</p>
+                    <div class="plan-summary">
+                        <div class="summary-card">
+                            <i class="fas fa-heartbeat"></i>
+                            <div>
+                                <h3>Overall Progress</h3>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 65%"></div>
+                                </div>
+                                <p>65% Complete</p>
+                            </div>
+                        </div>
+                        <div class="summary-card">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <h3>Current Streak</h3>
+                                <p class="streak">12 days</p>
+                                <p>Keep it up!</p>
+                            </div>
+                        </div>
+                        <div class="summary-card">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <h3>Plan Duration</h3>
+                                <p>30 days</p>
+                                <p>Started: Jun 1, 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="plan-tabs">
+                    <button class="tab-btn active" data-tab="nutrition">Nutrition</button>
+                    <button class="tab-btn" data-tab="fitness">Fitness</button>
+                    <button class="tab-btn" data-tab="progress">Progress</button>
                 </div>
                 
                 <div class="plan-container">
-                    <div class="plan-section">
-                        <h2>Nutrition Goals</h2>
-                        <div class="plan-goal">
-                            <i class="fas fa-utensils"></i>
-                            <div>
-                                <h3>Increase Vegetable Intake</h3>
-                                <p>5+ servings per day</p>
+                    <!-- Nutrition Section -->
+                    <div class="plan-section active" id="nutrition">
+                        <h2><i class="fas fa-utensils"></i> Nutrition Goals</h2>
+                        <div class="plan-goals">
+                            <div class="goal-card">
+                                <div class="goal-header">
+                                    <i class="fas fa-carrot"></i>
+                                    <div>
+                                        <h3>Increase Vegetable Intake</h3>
+                                        <p>5+ servings per day</p>
+                                    </div>
+                                    <span class="goal-status complete">Completed</span>
+                                </div>
+                                <div class="goal-details">
+                                    <p><strong>Why this matters:</strong> Vegetables provide essential vitamins, minerals, and fiber that support overall health.</p>
+                                    <ul>
+                                        <li>Include at least 2 servings with lunch and dinner</li>
+                                        <li>Try one new vegetable each week</li>
+                                        <li>Add spinach or kale to your morning smoothie</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="goal-card">
+                                <div class="goal-header">
+                                    <i class="fas fa-tint"></i>
+                                    <div>
+                                        <h3>Hydration</h3>
+                                        <p>2 liters of water daily</p>
+                                    </div>
+                                    <span class="goal-status in-progress">In Progress</span>
+                                </div>
+                                <div class="goal-details">
+                                    <p><strong>Why this matters:</strong> Proper hydration supports digestion, energy levels, and cognitive function.</p>
+                                    <ul>
+                                        <li>Drink a glass of water first thing in the morning</li>
+                                        <li>Carry a reusable water bottle with you</li>
+                                        <li>Set hourly reminders on your phone</li>
+                                    </ul>
+                                    <div class="tracker">
+                                        <p>Your progress: 1.5L / 2L today</p>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="goal-card">
+                                <div class="goal-header">
+                                    <i class="fas fa-apple-alt"></i>
+                                    <div>
+                                        <h3>Reduce Processed Sugar</h3>
+                                        <p>Less than 25g per day</p>
+                                    </div>
+                                    <span class="goal-status not-started">Not Started</span>
+                                </div>
+                                <div class="goal-details">
+                                    <p><strong>Why this matters:</strong> Reducing sugar intake helps maintain stable energy levels and supports weight management.</p>
+                                    <ul>
+                                        <li>Replace sugary snacks with fresh fruit</li>
+                                        <li>Read nutrition labels carefully</li>
+                                        <li>Gradually reduce sugar in your coffee/tea</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <!-- More goals -->
+                        
+                        <div class="resources">
+                            <h3>Nutrition Resources</h3>
+                            <div class="resource-grid">
+                                <a href="#" class="resource-card">
+                                    <i class="fas fa-book"></i>
+                                    <h4>7-Day Meal Plan</h4>
+                                    <p>Balanced vegetarian meals for beginners</p>
+                                </a>
+                                <a href="#" class="resource-card">
+                                    <i class="fas fa-utensils"></i>
+                                    <h4>Healthy Recipes</h4>
+                                    <p>Quick and nutritious meal ideas</p>
+                                </a>
+                                <a href="#" class="resource-card">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <h4>Grocery List</h4>
+                                    <p>Weekly shopping list for healthy eating</p>
+                                </a>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <!-- Fitness Section -->
+                    <div class="plan-section" id="fitness">
+                        <h2><i class="fas fa-running"></i> Fitness Goals</h2>
+                        <div class="plan-goals">
+                            <div class="goal-card">
+                                <div class="goal-header">
+                                    <i class="fas fa-walking"></i>
+                                    <div>
+                                        <h3>Daily Steps</h3>
+                                        <p>10,000 steps per day</p>
+                                    </div>
+                                    <span class="goal-status in-progress">In Progress</span>
+                                </div>
+                                <div class="goal-details">
+                                    <p><strong>Why this matters:</strong> Walking improves cardiovascular health and boosts mood.</p>
+                                    <ul>
+                                        <li>Take short walks during breaks</li>
+                                        <li>Use stairs instead of elevators</li>
+                                        <li>Park farther from destinations</li>
+                                    </ul>
+                                    <div class="tracker">
+                                        <p>Today: 8,245 steps</p>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 82%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="goal-card">
+                                <div class="goal-header">
+                                    <i class="fas fa-dumbbell"></i>
+                                    <div>
+                                        <h3>Strength Training</h3>
+                                        <p>3 sessions per week</p>
+                                    </div>
+                                    <span class="goal-status complete">Completed</span>
+                                </div>
+                                <div class="goal-details">
+                                    <p><strong>Why this matters:</strong> Strength training builds muscle, boosts metabolism, and improves bone density.</p>
+                                    <ul>
+                                        <li>Focus on major muscle groups</li>
+                                        <li>Start with bodyweight exercises</li>
+                                        <li>Gradually increase resistance</li>
+                                    </ul>
+                                    <div class="workout-schedule">
+                                        <h4>This Week's Schedule</h4>
+                                        <div class="schedule-days">
+                                            <div class="day completed">Mon: Upper Body</div>
+                                            <div class="day completed">Wed: Lower Body</div>
+                                            <div class="day upcoming">Fri: Full Body</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Progress Section -->
+                    <div class="plan-section" id="progress">
+                        <h2><i class="fas fa-chart-line"></i> Your Progress</h2>
+                        <div class="progress-metrics">
+                            <div class="metric-card">
+                                <h3>Consistency</h3>
+                                <div class="metric-value">82%</div>
+                                <p>Plan adherence</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 82%"></div>
+                                </div>
+                            </div>
+                            <div class="metric-card">
+                                <h3>Goals Completed</h3>
+                                <div class="metric-value">7/12</div>
+                                <p>Milestones achieved</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 58%"></div>
+                                </div>
+                            </div>
+                            <div class="metric-card">
+                                <h3>Days Remaining</h3>
+                                <div class="metric-value">18</div>
+                                <p>Until plan completion</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 40%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-charts">
+                            <div class="chart-container">
+                                <h3>Weekly Progress</h3>
+                                <canvas id="weeklyChart"></canvas>
+                            </div>
+                            <div class="chart-container">
+                                <h3>Goal Completion</h3>
+                                <canvas id="goalsChart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="achievements">
+                            <h3>Your Achievements</h3>
+                            <div class="badges">
+                                <div class="badge">
+                                    <i class="fas fa-medal"></i>
+                                    <p>7-Day Streak</p>
+                                </div>
+                                <div class="badge">
+                                    <i class="fas fa-seedling"></i>
+                                    <p>Veggie Master</p>
+                                </div>
+                                <div class="badge">
+                                    <i class="fas fa-water"></i>
+                                    <p>Hydration Hero</p>
+                                </div>
+                                <div class="badge">
+                                    <i class="fas fa-dumbbell"></i>
+                                    <p>Strength Starter</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="plan-actions">
+                    <button class="btn btn-outline">
+                        <i class="fas fa-print"></i> Print Plan
+                    </button>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-sync-alt"></i> Update Progress
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-share-alt"></i> Share with Coach
+                    </button>
                 </div>
             </div>
         </div>
     </main>
 
+     <!-- Footer -->
     <footer>
-        <!-- Same footer as index.html -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>🏥💚Heal<span>space</span></h3>
+                    <p>Your trusted partner in health, wellness, and personal transformation since 2024.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/dipendra.bhatta.244268/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/veganism.html">Veganism</a></li>
+                        <li><a href="pages/fitness.html">Fitness</a></li>
+                        <li><a href="pages/addiction_recovery.html">Recovery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="pages/health_score.html">Health Score</a></li>
+                        <li><a href="pages/habit_tracker.html">Tracker</a></li>
+                        <li><a href="pages/community_forum.html">Community</a></li>
+                        <li><a href="pages/blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@healspace.com</li>
+                        <li><i class="fas fa-phone"></i> 9860038245</li>
+                        <li><i class="fas fa-map-marker-alt"></i>Miatidevi, Kathmandu</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 healspace. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="pages/privacy_policy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/pages/personalized_plan.js"></script>
+     <script src="../js/main.js"></script>
 </body>
 </html>
