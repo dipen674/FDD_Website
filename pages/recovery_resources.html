@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealSpace | Recovery Resources</title>
+    <title>Recovery Resources | HealSpace</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/recovery_resources.css">
 </head>
 <body>
-    <!-- Header (Reused from index.html) -->
     <header>
         <div class="container">
             <nav class="navbar">
@@ -18,7 +17,8 @@
                 <ul class="nav-links">
                     <li><a href="../index.html">Home</a></li>
                     <li class="dropdown">
-                        <a href="#" aria-expanded="false" aria-controls="educational-content"><i class="fas fa-book"></i> Educational Content</a>
+                        <a href="#" aria-expanded="false" aria-controls="educational-content"><i
+                                class="fas fa-book"></i> Educational Content</a>
                         <div class="dropdown-content" id="educational-content">
                             <div class="dropdown-column">
                                 <h4><i class="fas fa-leaf"></i> Veganism</h4>
@@ -38,7 +38,8 @@
                         </div>
                     </li>
                     <li class="dropdown">
-                        <a href="#" aria-expanded="false" aria-controls="tools-content"><i class="fas fa-tools"></i> Tools</a>
+                        <a href="#" aria-expanded="false" aria-controls="tools-content"><i class="fas fa-tools"></i>
+                            Tools</a>
                         <div class="dropdown-content" id="tools-content">
                             <div class="dropdown-column">
                                 <h4><i class="fas fa-chart-line"></i> Health Tracking</h4>
@@ -54,7 +55,8 @@
                         </div>
                     </li>
                     <li class="dropdown">
-                        <a href="#" aria-expanded="false" aria-controls="community-content"><i class="fas fa-users"></i> Community</a>
+                        <a href="#" aria-expanded="false" aria-controls="community-content"><i class="fas fa-users"></i>
+                            Community</a>
                         <div class="dropdown-content" id="community-content">
                             <div class="dropdown-column">
                                 <h4><i class="fas fa-comments"></i> Engagement</h4>
@@ -80,101 +82,191 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="page-content">
-        <section class="hero-section">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Recovery Resources <span class="highlight">for Your Journey</span></h1>
-                    <p>Explore a wide range of tools, articles, videos, and guides to support your path to recovery and wellness.</p>
-                    <a href="#resources" class="btn btn-primary">Discover Resources</a>
-                </div>
+    <main class="recovery-resources-page">
+        <div class="container">
+            <div class="content-header">
+                <h1>Recovery Resources</h1>
+                <p>Your journey to wellness is supported by evidence-based resources, compassionate guidance, and a caring community</p>
             </div>
-        </section>
-
-        <section class="resources-section" id="resources">
-            <div class="container">
-                <div class="resources-header">
-                    <h2>Curated Recovery Resources</h2>
-                    <p>Find expert-backed resources tailored to your recovery needs, from mindfulness techniques to community support.</p>
-                </div>
-
-                <!-- Search and Filter -->
-                <div class="search-filter">
-                    <div class="search-bar">
-                        <input type="text" id="resource-search" placeholder="Search resources...">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <div class="filter-buttons">
-                        <button class="filter-btn active" data-filter="all">All</button>
-                        <button class="filter-btn" data-filter="article">Articles</button>
-                        <button class="filter-btn" data-filter="video">Videos</button>
-                        <button class="filter-btn" data-filter="guide">Guides</button>
-                        <button class="filter-btn" data-filter="tool">Tools</button>
-                    </div>
-                </div>
-
-                <!-- Resources Grid -->
-                <div class="resource-categories">
-                    <div class="resource-card" data-type="article">
-                        <span class="resource-type"><i class="fas fa-book"></i> Article</span>
+            
+            <div class="resource-categories">
+                <button class="category-btn active" data-category="all">All Resources</button>
+                <button class="category-btn" data-category="article">Articles & Guides</button>
+                <button class="category-btn" data-category="tool">Tools & Trackers</button>
+                <button class="category-btn" data-category="support">Support Groups</button>
+                <button class="category-btn" data-category="professional">Professional Help</button>
+            </div>
+            
+            <div class="resources-grid">
+                <!-- Resource 1 -->
+                <div class="resource-card" data-category="article">
+                    <div class="card-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <span class="resource-type">Article</span>
                         <h3>Understanding Addiction</h3>
-                        <p>Learn about the science of addiction, its effects, and evidence-based recovery strategies.</p>
-                        <a href="#" class="resource-link" data-modal="article-1">Read More</a>
                     </div>
-                    <div class="resource-card" data-type="video">
-                        <span class="resource-type"><i class="fas fa-video"></i> Video</span>
-                        <h3>Mindful Recovery Techniques</h3>
-                        <p>Watch guided mindfulness exercises to reduce stress and support recovery.</p>
-                        <a href="../videos/index/Healthy Lifestyle.mp4" class="resource-link" data-modal="video-1">Watch Now</a>
+                    <div class="card-body">
+                        <p>A comprehensive guide to the science of addiction, its effects on the brain, and pathways to recovery. Learn how addiction develops and evidence-based approaches to healing.</p>
                     </div>
-                    <div class="resource-card" data-type="guide">
-                        <span class="resource-type"><i class="fas fa-file-alt"></i> Guide</span>
-                        <h3>Building a Support Network</h3>
-                        <p>A step-by-step guide to creating a strong, supportive community for recovery.</p>
-                        <a href="#" class="resource-link" data-modal="guide-1">View Guide</a>
-                    </div>
-                    <div class="resource-card" data-type="tool">
-                        <span class="resource-type"><i class="fas fa-tools"></i> Tool</span>
-                        <h3>Daily Recovery Tracker</h3>
-                        <p>Track your progress with our interactive tool to stay motivated.</p>
-                        <a href="../pages/habit_tracker.html" class="resource-link">Start Tracking</a>
-                    </div>
-                    <div class="resource-card" data-type="article">
-                        <span class="resource-type"><i class="fas fa-book"></i> Article</span>
-                        <h3>Coping with Cravings</h3>
-                        <p>Practical strategies to manage and overcome cravings during recovery.</p>
-                        <a href="#" class="resource-link" data-modal="article-2">Read More</a>
-                    </div>
-                    <div class="resource-card" data-type="video">
-                        <span class="resource-type"><i class="fas fa-video"></i> Video</span>
-                        <h3>Yoga for Recovery</h3>
-                        <p>Follow a 20-minute yoga session designed for mental clarity and recovery.</p>
-                        <a href="../videos/workout_plan/recovery_flow.jpg" class="resource-link" data-modal="video-2">Watch Now</a>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Read Article</a>
                     </div>
                 </div>
-
-                <!-- Downloadable Guide -->
-                <div class="download-guide">
-                    <h3>Download Our Recovery Guide</h3>
-                    <p>Get our comprehensive PDF guide with tips, resources, and a 30-day recovery plan.</p>
-                    <a href="#" class="btn btn-primary">Download Now <i class="fas fa-download"></i></a>
+                
+                <!-- Resource 2 -->
+                <div class="resource-card" data-category="tool">
+                    <div class="card-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <span class="resource-type">Mobile App</span>
+                        <h3>Sobriety Tracker</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Track your substance-free days, milestones, and savings. Features daily motivation, craving management tools, and progress visualization to support your journey.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Download App</a>
+                    </div>
+                </div>
+                
+                <!-- Resource 3 -->
+                <div class="resource-card" data-category="support">
+                    <div class="card-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <span class="resource-type">Support Group</span>
+                        <h3>Daily Online Meetings</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Join our 24/7 online support community with scheduled meetings every 2 hours. Connect with others who understand your journey in a safe, anonymous environment.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Join Meeting</a>
+                    </div>
+                </div>
+                
+                <!-- Resource 4 -->
+                <div class="resource-card" data-category="professional">
+                    <div class="card-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <span class="resource-type">Professional</span>
+                        <h3>Therapist Directory</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Find certified addiction specialists, therapists, and counselors in your area. Filter by specialty, insurance accepted, and treatment approaches.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Find Help</a>
+                    </div>
+                </div>
+                
+                <!-- Resource 5 -->
+                <div class="resource-card" data-category="article">
+                    <div class="card-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-file-audio"></i>
+                        </div>
+                        <span class="resource-type">Audio Guide</span>
+                        <h3>Mindfulness Meditations</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Curated collection of guided meditations for stress reduction, craving management, and emotional regulation. Designed specifically for recovery journeys.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Listen Now</a>
+                    </div>
+                </div>
+                
+                <!-- Resource 6 -->
+                <div class="resource-card" data-category="article">
+                    <div class="card-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <span class="resource-type">Nutrition Guide</span>
+                        <h3>Recovery Meal Plans</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Nutritional strategies to support your recovery. Learn how certain foods can help repair your body, stabilize mood, and reduce cravings during recovery.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">View Plans</a>
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Modal for Resource Details -->
-        <div class="modal" id="resource-modal">
-            <div class="modal-content">
-                <span class="modal-close"><i class="fas fa-times"></i></span>
-                <div class="modal-body">
-                    <!-- Content will be dynamically inserted -->
+            
+            <div class="inspiration-section">
+                <h2><i class="fas fa-quote-left"></i> Hope in Recovery</h2>
+                <p>Every step forward, no matter how small, is a victory in your journey</p>
+                
+                <div class="quote">
+                    "Recovery is not a race. You don't have to feel guilty if it takes you longer than you thought it would. The important thing is that you're making progress, not how fast you're going."
+                </div>
+                
+                <a href="#" class="btn btn-outline">Read Success Stories</a>
+            </div>
+            
+            <div class="emergency-section">
+                <h2><i class="fas fa-exclamation-triangle"></i> Immediate Help</h2>
+                <p>If you're in crisis or need immediate support, these resources are available 24/7</p>
+                
+                <div class="emergency-contacts">
+                    <div class="contact-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Crisis Hotline</h3>
+                        <p>National Substance Abuse Helpline</p>
+                        <p><strong>1-800-662-HELP (4357)</strong></p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <i class="fas fa-comments"></i>
+                        <h3>Text Support</h3>
+                        <p>Crisis Text Line</p>
+                        <p><strong>Text HOME to 741741</strong></p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Find Treatment</h3>
+                        <p>Locate nearby treatment facilities</p>
+                        <a href="#" class="btn btn-primary">Search Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="community-section">
+                <h2>You're Not Alone</h2>
+                <p>Join our supportive community and connect with others on the recovery journey</p>
+                
+                <div class="community-cards">
+                    <div class="community-card">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3>Peer Support</h3>
+                        <p>Connect with others who understand your journey and can offer genuine support</p>
+                    </div>
+                    
+                    <div class="community-card">
+                        <i class="fas fa-calendar-check"></i>
+                        <h3>Daily Check-ins</h3>
+                        <p>Accountability and encouragement through our daily check-in system</p>
+                    </div>
+                    
+                    <div class="community-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Recovery Workshops</h3>
+                        <p>Weekly workshops on coping strategies, relapse prevention, and life skills</p>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Footer (Reused from index.html) -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -188,6 +280,7 @@
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
+
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
@@ -197,6 +290,7 @@
                         <li><a href="../pages/addiction_recovery.html">Recovery</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-col">
                     <h4>Resources</h4>
                     <ul>
@@ -206,15 +300,17 @@
                         <li><a href="../pages/blog.html">Blog</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-col">
                     <h4>Contact Us</h4>
                     <ul>
                         <li><i class="fas fa-envelope"></i> support@healspace.com</li>
                         <li><i class="fas fa-phone"></i> 9860038245</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Maitidevi, Kathmandu</li>
+                        <li><i class="fas fa-map-marker-alt"></i>Miatidevi, Kathmandu</li>
                     </ul>
                 </div>
             </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2025 healspace. All rights reserved.</p>
                 <div class="footer-links">
