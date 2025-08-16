@@ -3,43 +3,454 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Events | lbef</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Community Events | HealSpace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/events.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <header>
-        <!-- Same header as index.html -->
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">🏥💚Heal<span>Space</span></a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="educational-content"><i
+                                class="fas fa-book"></i> Educational Content</a>
+                        <div class="dropdown-content" id="educational-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-leaf"></i> Veganism</h4>
+                                <a href="../pages/veganism.html">Introduction <span class="badge">Popular</span></a>
+                                <a href="../pages/vegan_recipes.html">Recipes</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-running"></i> Fitness</h4>
+                                <a href="../pages/workout_plans.html">Plans <span class="badge">New</span></a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-hands-helping"></i> Recovery</h4>
+                                <a href="../pages/addiction_recovery.html">Guide</a>
+                                <a href="../pages/recovery_resources.html">Resources</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="tools-content"><i class="fas fa-tools"></i>
+                            Tools</a>
+                        <div class="dropdown-content" id="tools-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-chart-line"></i> Health Tracking</h4>
+                                <a href="../pages/health_score.html">Health Score</a>
+                                <a href="../pages/habit_tracker.html">Habit Tracker</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-check-circle"></i> Assessments</h4>
+                                <a href="../pages/self_assessment.html">Self-Assessment</a>
+                                <a href="../pages/readiness_assessment.html">Readiness Test</a>
+                                <a href="../pages/personalized_plan.html">Personalized Plan</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="community-content"><i class="fas fa-users"></i>
+                            Community</a>
+                        <div class="dropdown-content" id="community-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-comments"></i> Engagement</h4>
+                                <a href="../pages/community_forum.html">Forum</a>
+                                <a href="../pages/events.html" class="active">Events</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-user-plus"></i> Participation</h4>
+                                <a href="../pages/expert_qa.html">Expert Q&A</a>
+                                <a href="../pages/join_community.html">Join Us</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="../pages/blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="../pages/join_community.html" class="btn btn-primary">Join Now</a>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <main class="page-content">
+    <main class="events-page">
         <div class="container">
-            <div class="content-container">
-                <div class="content-header">
-                    <h1>Upcoming Events</h1>
-                    <p>Join our community events and workshops</p>
+            <div class="events-header">
+                <h1>Community Events</h1>
+                <p>Join our workshops, webinars, and gatherings to connect with others on their wellness journey</p>
+            </div>
+            
+            <div class="events-controls">
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="list"><i class="fas fa-list"></i> List View</button>
+                    <button class="view-btn" data-view="calendar"><i class="fas fa-calendar"></i> Calendar View</button>
                 </div>
-                
-                <div class="events-calendar">
-                    <div class="event-card">
-                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Yoga Event">
-                        <div class="event-details">
-                            <span class="event-date">Jun 15, 2023</span>
-                            <h3>Community Yoga Session</h3>
-                            <p>Join us for a relaxing outdoor yoga session.</p>
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="category-filter"><i class="fas fa-filter"></i> Filter by Category:</label>
+                        <select id="category-filter">
+                            <option value="all">All Events</option>
+                            <option value="workshop">Workshops</option>
+                            <option value="webinar">Webinars</option>
+                            <option value="meetup">Local Meetups</option>
+                            <option value="challenge">Challenges</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="date-filter"><i class="fas fa-calendar-day"></i> Filter by Date:</label>
+                        <select id="date-filter">
+                            <option value="all">All Dates</option>
+                            <option value="upcoming">Upcoming</option>
+                            <option value="this-week">This Week</option>
+                            <option value="this-month">This Month</option>
+                            <option value="past">Past Events</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="events-container list-view">
+                <div class="events-list">
+                    <div class="event-card" data-category="workshop" data-date="2023-06-15">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">Jun</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-category workshop">Workshop</div>
+                            <h3>Mindful Meditation & Yoga Retreat</h3>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> 9:00 AM - 12:00 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Peace Park, Kathmandu</span>
+                            </div>
+                            <p class="event-description">Join us for a rejuvenating morning of mindfulness and movement. Experience guided meditation, gentle yoga, and breathing techniques to reduce stress and enhance wellbeing.</p>
+                            <div class="event-stats">
+                                <span><i class="fas fa-users"></i> 45 attendees</span>
+                                <span><i class="fas fa-star"></i> 4.8/5 (24 reviews)</span>
+                            </div>
+                            <div class="event-actions">
+                                <a href="../pages/join_community.html" class="btn btn-primary">Register Now</a>
+                                <button class="btn btn-outline add-to-calendar-btn" data-event="Mindful Meditation & Yoga Retreat">Add to Calendar</button>
+                            </div>
+                        </div>
+                        <div class="event-image">
+                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mindful Meditation">
                         </div>
                     </div>
-                    <!-- More events -->
+                    
+                    <div class="event-card" data-category="webinar" data-date="2023-06-20">
+                        <div class="event-date">
+                            <span class="day">20</span>
+                            <span class="month">Jun</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-category webinar">Webinar</div>
+                            <h3>Nutrition for Recovery: Plant-Based Solutions</h3>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> 6:00 PM - 7:30 PM</span>
+                                <span><i class="fas fa-video"></i> Online Event</span>
+                            </div>
+                            <p class="event-description">Learn how nutrition supports recovery with expert dietitian Dr. Anjali Sharma. Discover plant-based foods that aid healing and promote sustained wellness.</p>
+                            <div class="event-stats">
+                                <span><i class="fas fa-users"></i> 78 attendees</span>
+                                <span><i class="fas fa-star"></i> 4.9/5 (32 reviews)</span>
+                            </div>
+                            <div class="event-actions">
+                                <a href="../pages/join_community.html" class="btn btn-primary">Register Now</a>
+                                <button class="btn btn-outline add-to-calendar-btn" data-event="Nutrition for Recovery">Add to Calendar</button>
+                            </div>
+                        </div>
+                        <div class="event-image">
+                            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Plant-Based Nutrition">
+                        </div>
+                    </div>
+                    
+                    <div class="event-card" data-category="challenge" data-date="2023-06-25">
+                        <div class="event-date">
+                            <span class="day">25</span>
+                            <span class="month">Jun</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-category challenge">Challenge</div>
+                            <h3>7-Day Digital Detox Challenge Kickoff</h3>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> 10:00 AM - 11:30 AM</span>
+                                <span><i class="fas fa-video"></i> Online + Community Groups</span>
+                            </div>
+                            <p class="event-description">Join our week-long challenge to reduce screen time and reconnect with yourself. Includes daily mindfulness exercises, group support, and digital wellness tips.</p>
+                            <div class="event-stats">
+                                <span><i class="fas fa-users"></i> 102 attendees</span>
+                                <span><i class="fas fa-star"></i> 4.7/5 (41 reviews)</span>
+                            </div>
+                            <div class="event-actions">
+                                <a href="#" class="btn btn-primary">Join Challenge</a>
+                                <button class="btn btn-outline add-to-calendar-btn" data-event="Digital Detox Challenge">Add to Calendar</button>
+                            </div>
+                        </div>
+                        <div class="event-image">
+                            <img src="https://images.unsplash.com/photo-1549060279-7e168fce7090?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Digital Detox">
+                        </div>
+                    </div>
+                    
+                    <div class="event-card" data-category="meetup" data-date="2023-07-02">
+                        <div class="event-date">
+                            <span class="day">02</span>
+                            <span class="month">Jul</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-category meetup">Local Meetup</div>
+                            <h3>Healthy Cooking Class: Vegan Nepali Cuisine</h3>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> 3:00 PM - 5:30 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> HealSpace Community Kitchen</span>
+                            </div>
+                            <p class="event-description">Learn to prepare traditional Nepali dishes with a healthy, vegan twist. Discover new recipes and cooking techniques with Chef Rajendra Thapa.</p>
+                            <div class="event-stats">
+                                <span><i class="fas fa-users"></i> 24 attendees</span>
+                                <span><i class="fas fa-star"></i> 4.9/5 (18 reviews)</span>
+                            </div>
+                            <div class="event-actions">
+                                <a href="../pages/join_community.html" class="btn btn-primary">Register Now</a>
+                                <button class="btn btn-outline add-to-calendar-btn" data-event="Vegan Cooking Class">Add to Calendar</button>
+                            </div>
+                        </div>
+                        <div class="event-image">
+                            <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Vegan Cooking">
+                        </div>
+                    </div>
+                    
+                    <div class="event-card" data-category="workshop" data-date="2023-07-10">
+                        <div class="event-date">
+                            <span class="day">10</span>
+                            <span class="month">Jul</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-category workshop">Workshop</div>
+                            <h3>Morning Movement & Mindfulness Hike</h3>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> 6:30 AM - 9:00 AM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Shivapuri Nagarjun National Park</span>
+                            </div>
+                            <p class="event-description">Start your day with an invigorating hike combined with mindfulness practices. Suitable for all fitness levels with scenic nature views.</p>
+                            <div class="event-stats">
+                                <span><i class="fas fa-users"></i> 36 attendees</span>
+                                <span><i class="fas fa-star"></i> 4.8/5 (22 reviews)</span>
+                            </div>
+                            <div class="event-actions">
+                                <a href="../pages/join_community.html" class="btn btn-primary">Register Now</a>
+                                <button class="btn btn-outline add-to-calendar-btn" data-event="Mindfulness Hike">Add to Calendar</button>
+                            </div>
+                        </div>
+                        <div class="event-image">
+                            <img src="https://images.unsplash.com/photo-1506126279646-a697353d3166?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Morning Hike">
+                        </div>
+                    </div>
                 </div>
+                
+                <div class="events-calendar" style="display: none;">
+                    <div class="calendar-header">
+                        <button class="prev-month"><i class="fas fa-chevron-left"></i></button>
+                        <h3>June 2023</h3>
+                        <button class="next-month"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar-grid">
+                        <div class="calendar-weekdays">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="calendar-days">
+                            <!-- Calendar days will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="calendar-events">
+                        <h3>Events in June</h3>
+                        <ul>
+                            <li>
+                                <span class="event-date">Jun 15</span>
+                                <span class="event-title">Mindful Meditation & Yoga Retreat</span>
+                            </li>
+                            <li>
+                                <span class="event-date">Jun 20</span>
+                                <span class="event-title">Nutrition for Recovery: Plant-Based Solutions</span>
+                            </li>
+                            <li>
+                                <span class="event-date">Jun 25</span>
+                                <span class="event-title">7-Day Digital Detox Challenge Kickoff</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="events-cta">
+                <div class="cta-content">
+                    <h2>Host Your Own Event</h2>
+                    <p>Have an idea for a wellness event? Share your expertise with the community.</p>
+                    <button id="proposeEventBtn" class="btn btn-primary">Propose an Event</button>
+                </div>
+            </div>
+            
+            <div class="past-events">
+                <h2>Past Events Gallery</h2>
+                <p>Relive memorable moments from our community gatherings</p>
+                
+                <div class="events-gallery">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1549060279-7e168fce7090?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Community Event">
+                        <div class="gallery-caption">Vegan Cooking Masterclass - May 2023</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fitness Event">
+                        <div class="gallery-caption">Sunrise Yoga Session - April 2023</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Workshop">
+                        <div class="gallery-caption">Mindfulness Workshop - March 2023</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Recovery Event">
+                        <div class="gallery-caption">Recovery Support Meetup - February 2023</div>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-outline">View All Past Events</a>
             </div>
         </div>
     </main>
 
+    <!-- Event Proposal Modal -->
+    <div id="eventProposalModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Propose a New Event</h2>
+            <p>Fill in the details about your event idea</p>
+            
+            <form id="eventProposalForm">
+                <div class="form-group">
+                    <label for="eventTitle">Event Title</label>
+                    <input type="text" id="eventTitle" placeholder="Mindful Morning Yoga" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="eventCategory">Category</label>
+                    <select id="eventCategory" required>
+                        <option value="">Select a category</option>
+                        <option value="workshop">Workshop</option>
+                        <option value="webinar">Webinar</option>
+                        <option value="meetup">Local Meetup</option>
+                        <option value="challenge">Challenge</option>
+                    </select>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="eventDate">Date</label>
+                        <input type="date" id="eventDate" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="eventTime">Time</label>
+                        <input type="time" id="eventTime" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="eventLocation">Location or Platform</label>
+                    <input type="text" id="eventLocation" placeholder="Peace Park, Kathmandu or Zoom Meeting" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="eventDescription">Event Description</label>
+                    <textarea id="eventDescription" rows="4" placeholder="Describe your event in detail..." required></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Submit Proposal</button>
+                    <button type="button" class="btn btn-outline close-modal">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="notificationToast" class="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle toast-icon"></i>
+            <div class="toast-message">Event added to your calendar!</div>
+        </div>
+    </div>
+
     <footer>
-        <!-- Same footer as index.html -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>🏥💚Heal<span>space</span></h3>
+                    <p>Your trusted partner in health, wellness, and personal transformation since 2024.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/dipendra.bhatta.244268/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../pages/veganism.html">Veganism</a></li>
+                         <li><a href="../pages/workout_plans.html">Fitness</a></li>
+                        <li><a href="../pages/addiction_recovery.html">Recovery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../pages/health_score.html">Health Score</a></li>
+                        <li><a href="../pages/habit_tracker.html">Tracker</a></li>
+                        <li><a href="../pages/community_forum.html">Community</a></li>
+                        <li><a href="../pages/blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@healspace.com</li>
+                        <li><i class="fas fa-phone"></i> 9860038245</li>
+                        <li><i class="fas fa-map-marker-alt"></i>Miatidevi, Kathmandu</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 healspace. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="../pages/privacy_policy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="../js/main.js"></script>
-    <script src="../js/analytics.js"></script>
+    <script src="../js/pages/events.js"></script>
 </body>
 </html>

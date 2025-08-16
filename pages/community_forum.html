@@ -3,41 +3,470 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Forum | lbef</title>
+    <title>Community Forum | HealSpace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../css/community.css">
+    <link rel="stylesheet" href="../css/community_forum.css">
 </head>
 <body>
     <header>
-        <!-- Same header as index.html -->
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">🏥💚Heal<span>Space</span></a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="educational-content"><i
+                                class="fas fa-book"></i> Educational Content</a>
+                        <div class="dropdown-content" id="educational-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-leaf"></i> Veganism</h4>
+                                <a href="../pages/veganism.html">Introduction <span class="badge">Popular</span></a>
+                                <a href="../pages/vegan_recipes.html">Recipes</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-running"></i> Fitness</h4>
+                                <a href="../pages/workout_plans.html">Plans <span class="badge">New</span></a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-hands-helping"></i> Recovery</h4>
+                                <a href="../pages/addiction_recovery.html">Guide</a>
+                                <a href="../pages/recovery_resources.html">Resources</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="tools-content"><i class="fas fa-tools"></i>
+                            Tools</a>
+                        <div class="dropdown-content" id="tools-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-chart-line"></i> Health Tracking</h4>
+                                <a href="../pages/health_score.html">Health Score</a>
+                                <a href="../pages/habit_tracker.html">Habit Tracker</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-check-circle"></i> Assessments</h4>
+                                <a href="../pages/self_assessment.html">Self-Assessment</a>
+                                <a href="../pages/readiness_assessment.html">Readiness Test</a>
+                                <a href="../pages/personalized_plan.html">Personalized Plan</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="community-content"><i class="fas fa-users"></i>
+                            Community</a>
+                        <div class="dropdown-content" id="community-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-comments"></i> Engagement</h4>
+                                <a href="../pages/community_forum.html" class="active">Forum</a>
+                                <a href="../pages/events.html">Events</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-user-plus"></i> Participation</h4>
+                                <a href="../pages/expert_qa.html">Expert Q&A</a>
+                                <a href="../pages/join_community.html">Join Us</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="../pages/blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="../pages/join_community.html" class="btn btn-primary">Join Now</a>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <main class="page-content">
+    <main class="community-forum">
         <div class="container">
-            <div class="content-container">
-                <div class="content-header">
-                    <h1>Community Forum</h1>
-                    <p>Connect with others on their wellness journey</p>
+            <div class="forum-header">
+                <h1>Community Forum</h1>
+                <p>Connect with others on their wellness journey. Share experiences, ask questions, and support each other.</p>
+            </div>
+            
+            <div class="forum-stats">
+                <div class="stat-card">
+                    <h3>8,452</h3>
+                    <p>Active Members</p>
+                </div>
+                <div class="stat-card">
+                    <h3>24,789</h3>
+                    <p>Discussions</p>
+                </div>
+                <div class="stat-card">
+                    <h3>189,521</h3>
+                    <p>Replies</p>
+                </div>
+                <div class="stat-card">
+                    <h3>142</h3>
+                    <p>Online Now</p>
+                </div>
+            </div>
+            
+            <div class="forum-container">
+                <div class="forum-sidebar">
+                    <div class="forum-search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search discussions...">
+                    </div>
+                    
+                    <div class="new-post-btn">
+                        <button id="newDiscussionBtn">
+                            <i class="fas fa-plus"></i> Start New Discussion
+                        </button>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3><i class="fas fa-filter"></i> Filter by Category</h3>
+                        <ul class="category-filters">
+                            <li class="active" data-category="all">All Discussions</li>
+                            <li data-category="nutrition">Nutrition & Diet</li>
+                            <li data-category="fitness">Fitness & Exercise</li>
+                            <li data-category="recovery">Recovery Support</li>
+                            <li data-category="mindfulness">Mindfulness & Mental Health</li>
+                            <li data-category="recipes">Recipes & Meal Ideas</li>
+                            <li data-category="success">Success Stories</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3><i class="fas fa-fire"></i> Trending Topics</h3>
+                        <ul class="trending-topics">
+                            <li>
+                                <i class="fas fa-comment"></i>
+                                <span>Vegan protein sources for athletes</span>
+                                <span class="topic-stats">142 replies</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-comment"></i>
+                                <span>Dealing with sugar cravings</span>
+                                <span class="topic-stats">89 replies</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-comment"></i>
+                                <span>Home workouts without equipment</span>
+                                <span class="topic-stats">203 replies</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-comment"></i>
+                                <span>Meditation techniques for beginners</span>
+                                <span class="topic-stats">76 replies</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="active-users">
+                        <h3><i class="fas fa-users"></i> Active Now</h3>
+                        <div class="users-list">
+                            <div class="user-item">
+                                <div class="user-avatar-small" style="background-color: #2a9d8f;">AR</div>
+                                <span>Arjun R.</span>
+                            </div>
+                            <div class="user-item">
+                                <div class="user-avatar-small" style="background-color: #e76f51;">SP</div>
+                                <span>Sunita P.</span>
+                            </div>
+                            <div class="user-item">
+                                <div class="user-avatar-small" style="background-color: #264653;">RM</div>
+                                <span>Raj M.</span>
+                            </div>
+                            <div class="user-item">
+                                <div class="user-avatar-small" style="background-color: #e9c46a;">PP</div>
+                                <span>Priya P.</span>
+                            </div>
+                            <div class="user-item">
+                                <div class="user-avatar-small" style="background-color: #f4a261;">KS</div>
+                                <span>Kiran S.</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="forum-categories">
-                    <div class="category-card">
-                        <h3><i class="fas fa-leaf"></i> Veganism Support</h3>
-                        <p>Discuss plant-based living and share recipes</p>
+                <div class="forum-main">
+                    <div class="forum-categories">
+                        <h2><i class="fas fa-folder-open"></i> Discussion Categories</h2>
+                        <div class="categories-grid">
+                            <div class="category-card" data-category="nutrition">
+                                <h3><i class="fas fa-utensils"></i> Nutrition & Diet</h3>
+                                <p>Discuss plant-based nutrition, supplements, and dietary strategies</p>
+                                <div class="category-stats">
+                                    <span>1,254 Topics</span>
+                                    <span>8,521 Replies</span>
+                                </div>
+                            </div>
+                            <div class="category-card" data-category="fitness">
+                                <h3><i class="fas fa-running"></i> Fitness & Exercise</h3>
+                                <p>Share workout routines, form tips, and fitness challenges</p>
+                                <div class="category-stats">
+                                    <span>892 Topics</span>
+                                    <span>5,634 Replies</span>
+                                </div>
+                            </div>
+                            <div class="category-card" data-category="recovery">
+                                <h3><i class="fas fa-hands-helping"></i> Recovery Support</h3>
+                                <p>Share experiences and support for addiction recovery journeys</p>
+                                <div class="category-stats">
+                                    <span>421 Topics</span>
+                                    <span>3,245 Replies</span>
+                                </div>
+                            </div>
+                            <div class="category-card" data-category="mindfulness">
+                                <h3><i class="fas fa-brain"></i> Mindfulness & Mental Health</h3>
+                                <p>Discuss meditation, stress management, and emotional wellness</p>
+                                <div class="category-stats">
+                                    <span>587 Topics</span>
+                                    <span>4,123 Replies</span>
+                                </div>
+                            </div>
+                            <div class="category-card" data-category="recipes">
+                                <h3><i class="fas fa-utensil-spoon"></i> Recipes & Meal Ideas</h3>
+                                <p>Share and discover healthy, delicious recipes</p>
+                                <div class="category-stats">
+                                    <span>1,021 Topics</span>
+                                    <span>7,452 Replies</span>
+                                </div>
+                            </div>
+                            <div class="category-card" data-category="success">
+                                <h3><i class="fas fa-trophy"></i> Success Stories</h3>
+                                <p>Share your transformation journey and celebrate victories</p>
+                                <div class="category-stats">
+                                    <span>324 Topics</span>
+                                    <span>2,156 Replies</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- More categories -->
+                    
+                    <div class="recent-discussions">
+                        <div class="recent-header">
+                            <h2><i class="fas fa-comments"></i> Recent Discussions</h2>
+                            <!-- <button class="sort-btn">
+                                <i class="fas fa-sort"></i> Sort by: Newest
+                            </button> -->
+                        </div>
+                        
+                        <div class="discussion-list">
+                            <div class="discussion-card" data-category="nutrition">
+                                <div class="user-avatar" style="background-color: #2a9d8f;">AR</div>
+                                <div class="discussion-content">
+                                    <h3>Best plant-based protein sources?</h3>
+                                    <div class="discussion-meta">
+                                        <span><i class="fas fa-user"></i> Arjun R.</span>
+                                        <span><i class="fas fa-clock"></i> 2 hours ago</span>
+                                        <span><i class="fas fa-folder"></i> Nutrition & Diet</span>
+                                    </div>
+                                    <p class="discussion-excerpt">I've been transitioning to a plant-based diet and would love recommendations for high-protein foods that aren't soy-based. What are your favorites?</p>
+                                    <div class="discussion-tags">
+                                        <span class="discussion-tag">vegan</span>
+                                        <span class="discussion-tag">protein</span>
+                                        <span class="discussion-tag">nutrition</span>
+                                    </div>
+                                    <div class="discussion-stats">
+                                        <div class="stat-item"><i class="fas fa-comment"></i> 24 replies</div>
+                                        <div class="stat-item"><i class="fas fa-eye"></i> 142 views</div>
+                                        <div class="stat-item"><i class="fas fa-heart"></i> 18 likes</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="discussion-card" data-category="fitness">
+                                <div class="user-avatar" style="background-color: #e76f51;">SP</div>
+                                <div class="discussion-content">
+                                    <h3>Home workouts without equipment</h3>
+                                    <div class="discussion-meta">
+                                        <span><i class="fas fa-user"></i> Sunita P.</span>
+                                        <span><i class="fas fa-clock"></i> 5 hours ago</span>
+                                        <span><i class="fas fa-folder"></i> Fitness & Exercise</span>
+                                    </div>
+                                    <p class="discussion-excerpt">Looking for effective bodyweight exercises I can do at home. Any recommendations for a full-body routine that doesn't require equipment?</p>
+                                    <div class="discussion-tags">
+                                        <span class="discussion-tag">home workout</span>
+                                        <span class="discussion-tag">fitness</span>
+                                        <span class="discussion-tag">bodyweight</span>
+                                    </div>
+                                    <div class="discussion-stats">
+                                        <div class="stat-item"><i class="fas fa-comment"></i> 16 replies</div>
+                                        <div class="stat-item"><i class="fas fa-eye"></i> 89 views</div>
+                                        <div class="stat-item"><i class="fas fa-heart"></i> 12 likes</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="discussion-card" data-category="recovery">
+                                <div class="user-avatar" style="background-color: #264653;">RM</div>
+                                <div class="discussion-content">
+                                    <h3>90 days sober today!</h3>
+                                    <div class="discussion-meta">
+                                        <span><i class="fas fa-user"></i> Raj M.</span>
+                                        <span><i class="fas fa-clock"></i> 1 day ago</span>
+                                        <span><i class="fas fa-folder"></i> Recovery Support</span>
+                                    </div>
+                                    <p class="discussion-excerpt">Just wanted to share this milestone with the community. Your support has been invaluable on this journey. What strategies helped you through the first 90 days?</p>
+                                    <div class="discussion-tags">
+                                        <span class="discussion-tag">recovery</span>
+                                        <span class="discussion-tag">milestone</span>
+                                        <span class="discussion-tag">support</span>
+                                    </div>
+                                    <div class="discussion-stats">
+                                        <div class="stat-item"><i class="fas fa-comment"></i> 42 replies</div>
+                                        <div class="stat-item"><i class="fas fa-eye"></i> 210 views</div>
+                                        <div class="stat-item"><i class="fas fa-heart"></i> 56 likes</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="discussion-card" data-category="mindfulness">
+                                <div class="user-avatar" style="background-color: #e9c46a;">PP</div>
+                                <div class="discussion-content">
+                                    <h3>Meditation for beginners</h3>
+                                    <div class="discussion-meta">
+                                        <span><i class="fas fa-user"></i> Priya P.</span>
+                                        <span><i class="fas fa-clock"></i> 1 day ago</span>
+                                        <span><i class="fas fa-folder"></i> Mindfulness & Mental Health</span>
+                                    </div>
+                                    <p class="discussion-excerpt">I'm new to meditation and finding it hard to quiet my mind. Any tips for beginners? How long did it take you to feel comfortable with the practice?</p>
+                                    <div class="discussion-tags">
+                                        <span class="discussion-tag">meditation</span>
+                                        <span class="discussion-tag">mindfulness</span>
+                                        <span class="discussion-tag">beginner</span>
+                                    </div>
+                                    <div class="discussion-stats">
+                                        <div class="stat-item"><i class="fas fa-comment"></i> 32 replies</div>
+                                        <div class="stat-item"><i class="fas fa-eye"></i> 178 views</div>
+                                        <div class="stat-item"><i class="fas fa-heart"></i> 24 likes</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="discussion-card" data-category="recipes">
+                                <div class="user-avatar" style="background-color: #f4a261;">KS</div>
+                                <div class="discussion-content">
+                                    <h3>Quick vegan dinner ideas?</h3>
+                                    <div class="discussion-meta">
+                                        <span><i class="fas fa-user"></i> Kiran S.</span>
+                                        <span><i class="fas fa-clock"></i> 2 days ago</span>
+                                        <span><i class="fas fa-folder"></i> Recipes & Meal Ideas</span>
+                                    </div>
+                                    <p class="discussion-excerpt">Looking for quick vegan dinner recipes that take less than 30 minutes to prepare. Bonus points for high-protein options that are family-friendly!</p>
+                                    <div class="discussion-tags">
+                                        <span class="discussion-tag">vegan</span>
+                                        <span class="discussion-tag">recipes</span>
+                                        <span class="discussion-tag">dinner</span>
+                                    </div>
+                                    <div class="discussion-stats">
+                                        <div class="stat-item"><i class="fas fa-comment"></i> 38 replies</div>
+                                        <div class="stat-item"><i class="fas fa-eye"></i> 156 views</div>
+                                        <div class="stat-item"><i class="fas fa-heart"></i> 29 likes</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- <div class="pagination">
+                            <button class="active">1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button><i class="fas fa-chevron-right"></i></button>
+                        </div> -->
+                    </div>
                 </div>
+            </div>
+        </div>
+        
+        <!-- New Discussion Modal -->
+        <div class="modal" id="newDiscussionModal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2><i class="fas fa-plus"></i> Start New Discussion</h2>
+                <form id="newDiscussionForm">
+                    <div class="form-group">
+                        <label for="discussionTitle">Discussion Title</label>
+                        <input type="text" id="discussionTitle" placeholder="Enter a clear title for your discussion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="discussionCategory">Category</label>
+                        <select id="discussionCategory" required>
+                            <option value="">Select a category</option>
+                            <option value="nutrition">Nutrition & Diet</option>
+                            <option value="fitness">Fitness & Exercise</option>
+                            <option value="recovery">Recovery Support</option>
+                            <option value="mindfulness">Mindfulness & Mental Health</option>
+                            <option value="recipes">Recipes & Meal Ideas</option>
+                            <option value="success">Success Stories</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="discussionContent">Your Message</label>
+                        <textarea id="discussionContent" rows="8" placeholder="Share your thoughts, questions, or experiences..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="discussionTags">Tags (comma separated)</label>
+                        <input type="text" id="discussionTags" placeholder="e.g., vegan, protein, beginner">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Post Discussion</button>
+                </form>
             </div>
         </div>
     </main>
 
     <footer>
-        <!-- Same footer as index.html -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>🏥💚Heal<span>space</span></h3>
+                    <p>Your trusted partner in health, wellness, and personal transformation since 2024.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/dipendra.bhatta.244268/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../pages/veganism.html">Veganism</a></li>
+                        <li><a href="../pages/workout_plans.html">Fitness</a></li>
+                        <li><a href="../pages/addiction_recovery.html">Recovery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../pages/health_score.html">Health Score</a></li>
+                        <li><a href="../pages/habit_tracker.html">Tracker</a></li>
+                        <li><a href="../pages/community_forum.html">Community</a></li>
+                        <li><a href="../pages/blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@healspace.com</li>
+                        <li><i class="fas fa-phone"></i> 9860038245</li>
+                        <li><i class="fas fa-map-marker-alt"></i>Miatidevi, Kathmandu</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 healspace. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="../pages/privacy_policy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="../js/main.js"></script>
-    <script src="../js/forum.js"></script>
-    <script src="../js/analytics.js"></script>
-
+    <script src="../js/pages/community_forum.js"></script>
 </body>
 </html>
