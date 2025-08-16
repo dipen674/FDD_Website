@@ -3,40 +3,496 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expert Q&A | lbef</title>
+    <title>Expert Q&A | HealSpace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/expert_qa.css">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../css/expert.css">
 </head>
 <body>
     <header>
         <!-- Same header as index.html -->
+ <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">🏥💚Heal<span>Space</span></a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+
+                    <!-- Educational Content Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="educational-content"><i class="fas fa-book"></i> Educational Content</a>
+                        <div class="dropdown-content" id="educational-content">
+                            <!-- Veganism Column -->
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-leaf"></i> Veganism</h4>
+                                <a href="veganism.html">Introduction <span class="badge">Popular</span></a>
+                                <a href="vegan_recipes.html">Recipes</a>
+                            </div>
+
+                            <!-- Fitness Column -->
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-running"></i> Fitness</h4>
+                                <a href="workout_plans.html">Plans <span class="badge">New</span></a>
+                            </div>
+
+                            <!-- Recovery Column -->
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-hands-helping"></i> Recovery</h4>
+                                <a href="addiction_recovery.html">Guide</a>
+                                <a href="recovery_resources.html">Resources</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Tools Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="tools-content"><i class="fas fa-tools"></i> Tools</a>
+                        <div class="dropdown-content" id="tools-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-chart-line"></i> Health Tracking</h4>
+                                <a href="health_score.html">Health Score</a>
+                                <a href="habit_tracker.html">Habit Tracker</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-check-circle"></i> Assessments</h4>
+                                <a href="self_assessment.html" class="active">Self-Assessment</a>
+                                <a href="readiness_assessment.html">Readiness Test</a>
+                                <a href="personalized_plan.html">Personalized Plan</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Community Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="community-content"><i class="fas fa-users"></i> Community</a>
+                        <div class="dropdown-content" id="community-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-comments"></i> Engagement</h4>
+                                <a href="community_forum.html">Forum</a>
+                                <a href="events.html">Events</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-user-plus"></i> Participation</h4>
+                                <a href="expert_qa.html">Expert Q&A</a>
+                                <a href="join_community.html">Join Us</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Blog -->
+                    <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="join_community.html" class="btn btn-primary">Join Now</a>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <main class="page-content">
+
+    <main class="expert-qa-page">
         <div class="container">
-            <div class="content-container">
-                <div class="content-header">
-                    <h1>Expert Q&A</h1>
-                    <p>Get answers from our team of health professionals</p>
+            <div class="content-header">
+                <h1>Expert Q&A</h1>
+                <p>Connect with our team of Nepali health professionals for personalized advice and guidance</p>
+            </div>
+            
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="specialty-filter"><i class="fas fa-filter"></i> Filter by Specialty:</label>
+                    <select id="specialty-filter">
+                        <option value="all">All Specialties</option>
+                        <option value="nutrition">Nutrition & Dietetics</option>
+                        <option value="fitness">Fitness & Exercise</option>
+                        <option value="mental">Mental Health</option>
+                        <option value="recovery">Recovery & Wellness</option>
+                        <option value="ayurveda">Ayurveda & Traditional</option>
+                    </select>
                 </div>
                 
-                <div class="expert-grid">
-                    <div class="expert-card">
-                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Nutritionist">
-                        <h3>Dr. Sarah Johnson</h3>
-                        <p>Nutrition Specialist</p>
+                <div class="filter-group">
+                    <label for="availability-filter"><i class="fas fa-calendar-check"></i> Filter by Availability:</label>
+                    <select id="availability-filter">
+                        <option value="all">All Availability</option>
+                        <option value="online">Available Online Now</option>
+                        <option value="week">Available This Week</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="expert-grid">
+                <!-- Expert 1 -->
+                <div class="expert-card" data-specialty="nutrition" data-availability="online">
+                    <div class="expert-image">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dr. Anjali Sharma">
                     </div>
-                    <!-- More experts -->
+                    <div class="expert-info">
+                        <h3>Dr. Anjali Sharma</h3>
+                        <div class="expert-specialty">Nutrition Specialist</div>
+                        <div class="expert-bio">PhD in Nutritional Sciences with 15+ years experience. Specializes in plant-based diets and metabolic health.</div>
+                        <div class="expert-stats">
+                            <span><i class="fas fa-star"></i> 4.9 (128 reviews)</span>
+                            <span><i class="fas fa-comments"></i> 420 answers</span>
+                        </div>
+                        <div class="expert-actions">
+                            <button class="btn btn-primary ask-question-btn" data-expert="Dr. Anjali Sharma">Ask a Question</button>
+                            <button class="btn btn-outline">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="expert-badges">
+                        <span class="badge online">Online Now</span>
+                        <span class="badge featured">Featured</span>
+                    </div>
+                </div>
+                
+                <!-- Expert 2 -->
+                <div class="expert-card" data-specialty="mental" data-availability="online">
+                    <div class="expert-image">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dr. Rajiv Thapa">
+                    </div>
+                    <div class="expert-info">
+                        <h3>Dr. Rajiv Thapa</h3>
+                        <div class="expert-specialty">Mental Health Counselor</div>
+                        <div class="expert-bio">Licensed therapist specializing in addiction recovery and stress management. 12 years of clinical experience.</div>
+                        <div class="expert-stats">
+                            <span><i class="fas fa-star"></i> 4.8 (95 reviews)</span>
+                            <span><i class="fas fa-comments"></i> 320 answers</span>
+                        </div>
+                        <div class="expert-actions">
+                            <button class="btn btn-primary ask-question-btn" data-expert="Dr. Rajiv Thapa">Ask a Question</button>
+                            <button class="btn btn-outline">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="expert-badges">
+                        <span class="badge online">Online Now</span>
+                    </div>
+                </div>
+                
+                <!-- Expert 3 -->
+                <div class="expert-card" data-specialty="fitness" data-availability="week">
+                    <div class="expert-image">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Suresh Rai">
+                    </div>
+                    <div class="expert-info">
+                        <h3>Suresh Rai</h3>
+                        <div class="expert-specialty">Certified Fitness Trainer</div>
+                        <div class="expert-bio">ACE-certified personal trainer with expertise in functional fitness and injury prevention.</div>
+                        <div class="expert-stats">
+                            <span><i class="fas fa-star"></i> 4.9 (210 reviews)</span>
+                            <span><i class="fas fa-comments"></i> 560 answers</span>
+                        </div>
+                        <div class="expert-actions">
+                            <button class="btn btn-primary ask-question-btn" data-expert="Suresh Rai">Ask a Question</button>
+                            <button class="btn btn-outline">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="expert-badges">
+                        <span class="badge featured">Featured</span>
+                    </div>
+                </div>
+                
+                <!-- Expert 4 -->
+                <div class="expert-card" data-specialty="ayurveda" data-availability="week">
+                    <div class="expert-image">
+                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dr. Sunita Gurung">
+                    </div>
+                    <div class="expert-info">
+                        <h3>Dr. Sunita Gurung</h3>
+                        <div class="expert-specialty">Ayurvedic Practitioner</div>
+                        <div class="expert-bio">Integrates traditional Ayurvedic medicine with modern nutrition science for holistic health.</div>
+                        <div class="expert-stats">
+                            <span><i class="fas fa-star"></i> 4.7 (87 reviews)</span>
+                            <span><i class="fas fa-comments"></i> 245 answers</span>
+                        </div>
+                        <div class="expert-actions">
+                            <button class="btn btn-primary ask-question-btn" data-expert="Dr. Sunita Gurung">Ask a Question</button>
+                            <button class="btn btn-outline">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Expert 5 -->
+                <div class="expert-card" data-specialty="recovery" data-availability="online">
+                    <div class="expert-image">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dr. Binod Poudel">
+                    </div>
+                    <div class="expert-info">
+                        <h3>Dr. Binod Poudel</h3>
+                        <div class="expert-specialty">Addiction Recovery Specialist</div>
+                        <div class="expert-bio">MD with specialization in addiction medicine. Focuses on evidence-based recovery strategies.</div>
+                        <div class="expert-stats">
+                            <span><i class="fas fa-star"></i> 4.9 (142 reviews)</span>
+                            <span><i class="fas fa-comments"></i> 380 answers</span>
+                        </div>
+                        <div class="expert-actions">
+                            <button class="btn btn-primary ask-question-btn" data-expert="Dr. Binod Poudel">Ask a Question</button>
+                            <button class="btn btn-outline">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="expert-badges">
+                        <span class="badge online">Online Now</span>
+                    </div>
+                </div>
+                
+                <!-- Expert 6 -->
+                <div class="expert-card" data-specialty="fitness" data-availability="week">
+                    <div class="expert-image">
+                        <img src="https://images.unsplash.com/photo-1551601651-09492b5468b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Priya Shrestha">
+                    </div>
+                    <div class="expert-info">
+                        <h3>Priya Shrestha</h3>
+                        <div class="expert-specialty">Yoga & Mindfulness Coach</div>
+                        <div class="expert-bio">E-RYT 500 certified yoga teacher with training in mindfulness-based stress reduction.</div>
+                        <div class="expert-stats">
+                            <span><i class="fas fa-star"></i> 4.8 (176 reviews)</span>
+                            <span><i class="fas fa-comments"></i> 420 answers</span>
+                        </div>
+                        <div class="expert-actions">
+                            <button class="btn btn-primary ask-question-btn" data-expert="Priya Shrestha">Ask a Question</button>
+                            <button class="btn btn-outline">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Expert 7 -->
+                <div class="expert-card" data-specialty="nutrition" data-availability="week">
+                    <div class="expert-image">
+                        <img src="https://images.unsplash.com/photo-1588617320131-077d656f430f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dr. Arjun KC">
+                    </div>
+                    <div class="expert-info">
+                        <h3>Dr. Arjun KC</h3>
+                        <div class="expert-specialty">Sports Nutritionist</div>
+                        <div class="expert-bio">Specializes in nutrition for athletes and active individuals. Focuses on performance optimization.</div>
+                        <div class="expert-stats">
+                            <span><i class="fas fa-star"></i> 4.8 (134 reviews)</span>
+                            <span><i class="fas fa-comments"></i> 310 answers</span>
+                        </div>
+                        <div class="expert-actions">
+                            <button class="btn btn-primary ask-question-btn" data-expert="Dr. Arjun KC">Ask a Question</button>
+                            <button class="btn btn-outline">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Expert 8 -->
+                <div class="expert-card" data-specialty="mental" data-availability="online">
+                    <div class="expert-image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dr. Sabina Karki">
+                    </div>
+                    <div class="expert-info">
+                        <h3>Dr. Sabina Karki</h3>
+                        <div class="expert-specialty">Clinical Psychologist</div>
+                        <div class="expert-bio">Specializes in cognitive behavioral therapy and mindfulness techniques for anxiety and depression.</div>
+                        <div class="expert-stats">
+                            <span><i class="fas fa-star"></i> 4.9 (156 reviews)</span>
+                            <span><i class="fas fa-comments"></i> 375 answers</span>
+                        </div>
+                        <div class="expert-actions">
+                            <button class="btn btn-primary ask-question-btn" data-expert="Dr. Sabina Karki">Ask a Question</button>
+                            <button class="btn btn-outline">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="expert-badges">
+                        <span class="badge online">Online Now</span>
+                    </div>
+                </div>
+                
+                <!-- Expert 9 -->
+                <div class="expert-card" data-specialty="recovery" data-availability="week">
+                    <div class="expert-image">
+                        <img src="https://images.unsplash.com/photo-1612349316227-18f5d9c7a15b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dr. Prakash Maharjan">
+                    </div>
+                    <div class="expert-info">
+                        <h3>Dr. Prakash Maharjan</h3>
+                        <div class="expert-specialty">Recovery Coach</div>
+                        <div class="expert-bio">Certified recovery coach with personal experience in addiction recovery and relapse prevention.</div>
+                        <div class="expert-stats">
+                            <span><i class="fas fa-star"></i> 4.9 (203 reviews)</span>
+                            <span><i class="fas fa-comments"></i> 480 answers</span>
+                        </div>
+                        <div class="expert-actions">
+                            <button class="btn btn-primary ask-question-btn" data-expert="Dr. Prakash Maharjan">Ask a Question</button>
+                            <button class="btn btn-outline">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Expert 10 -->
+                <div class="expert-card" data-specialty="ayurveda" data-availability="online">
+                    <div class="expert-image">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ranjana Thapa">
+                    </div>
+                    <div class="expert-info">
+                        <h3>Ranjana Thapa</h3>
+                        <div class="expert-specialty">Herbal Medicine Specialist</div>
+                        <div class="expert-bio">Expert in traditional Nepali herbal remedies and their integration with modern medicine.</div>
+                        <div class="expert-stats">
+                            <span><i class="fas fa-star"></i> 4.7 (98 reviews)</span>
+                            <span><i class="fas fa-comments"></i> 265 answers</span>
+                        </div>
+                        <div class="expert-actions">
+                            <button class="btn btn-primary ask-question-btn" data-expert="Ranjana Thapa">Ask a Question</button>
+                            <button class="btn btn-outline">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="expert-badges">
+                        <span class="badge online">Online Now</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="how-it-works">
+                <h2>How Our Expert Q&A Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Ask Your Question</h3>
+                        <p>Submit your health or wellness question to our experts</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Get Matched</h3>
+                        <p>We'll match you with the most suitable expert for your query</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Receive Answer</h3>
+                        <p>Get a personalized response within 24-48 hours</p>
+                    </div>
+                </div>
+                <div class="cta">
+                    <button id="askQuestionBtn" class="btn btn-primary">Ask a Question Now</button>
+                </div>
+            </div>
+            
+            <div class="testimonials">
+                <h2>What Our Community Says</h2>
+                <div class="testimonial-container">
+                    <div class="testimonial active">
+                        <p>"Dr. Sharma's advice helped me transition to a plant-based diet while still enjoying traditional Nepali foods. My energy levels have never been better!"</p>
+                        <div class="author">- Ramesh Bhandari, Kathmandu</div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Suresh Rai created a customized workout plan that considers my knee injury. I'm finally able to exercise without pain after 2 years."</p>
+                        <div class="author">- Sunita Tamang, Pokhara</div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Dr. Thapa's guidance helped me overcome my addiction. His compassionate approach made all the difference in my recovery journey."</p>
+                        <div class="author">- Amit Gurung, Chitwan</div>
+                    </div>
+                    <div class="testimonial-controls">
+                        <button class="prev-testimonial"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next-testimonial"><i class="fas fa-chevron-right"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
+    <!-- Question Modal -->
+    <div id="questionModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Ask Your Question</h2>
+            <form id="questionForm">
+                <div class="form-group">
+                    <label for="questionExpert">Select Expert:</label>
+                    <select id="questionExpert" required>
+                        <option value="">Choose an expert</option>
+                        <option value="Dr. Anjali Sharma">Dr. Anjali Sharma</option>
+                        <option value="Dr. Rajiv Thapa">Dr. Rajiv Thapa</option>
+                        <option value="Suresh Rai">Suresh Rai</option>
+                        <option value="Dr. Sunita Gurung">Dr. Sunita Gurung</option>
+                        <option value="Dr. Binod Poudel">Dr. Binod Poudel</option>
+                        <option value="Priya Shrestha">Priya Shrestha</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="questionTopic">Question Topic:</label>
+                    <input type="text" id="questionTopic" placeholder="e.g., Nutrition advice, Fitness routine" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="questionDetails">Your Question:</label>
+                    <textarea id="questionDetails" rows="5" placeholder="Please provide details about your question..." required></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Submit Question</button>
+                    <button type="button" class="btn btn-outline close-modal">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="notificationToast" class="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle toast-icon"></i>
+            <div class="toast-message">Your question has been submitted successfully!</div>
+        </div>
+    </div>
+
     <footer>
         <!-- Same footer as index.html -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>🏥💚Heal<span>space</span></h3>
+                    <p>Your trusted partner in health, wellness, and personal transformation since 2024.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/dipendra.bhatta.244268/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../pages/veganism.html">Veganism</a></li>
+                        <li><a href="../pages/workout_plans.html">Fitness</a></li>
+                        <li><a href="../pages/addiction_recovery.html">Recovery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../pages/health_score.html">Health Score</a></li>
+                        <li><a href="../pages/habit_tracker.html">Tracker</a></li>
+                        <li><a href="../pages/community_forum.html">Community</a></li>
+                        <li><a href="../pages/blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@healspace.com</li>
+                        <li><i class="fas fa-phone"></i> 9860038245</li>
+                        <li><i class="fas fa-map-marker-alt"></i>Miatidevi, Kathmandu</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 healspace. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="../pages/privacy_policy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="../js/main.js"></script>
-    <script src="../js/analytics.js"></script>
+    <script src="../js/pages/expert_qa.js"></script>
 </body>
 </html>

@@ -3,13 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Blog | lbef</title>
+    <title>Health Blog | HealSpace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/blog.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <!-- Same header as index.html -->
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">🏥💚Heal<span>Space</span></a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+
+                    <!-- Educational Content Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="educational-content"><i
+                                class="fas fa-book"></i> Educational Content</a>
+                        <div class="dropdown-content" id="educational-content">
+                            <!-- Veganism Column -->
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-leaf"></i> Veganism</h4>
+                                <a href="../pages/veganism.html">Introduction <span class="badge">Popular</span></a>
+                                <a href="../pages/vegan_recipes.html">Recipes</a>
+                            </div>
+
+                            <!-- Fitness Column -->
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-running"></i> Fitness</h4>
+                                <a href="../pages/workout_plans.html">Plans <span class="badge">New</span></a>
+                            </div>
+
+                            <!-- Recovery Column -->
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-hands-helping"></i> Recovery</h4>
+                                <a href="../pages/addiction_recovery.html">Guide</a>
+                                <a href="../pages/recovery_resources.html">Resources</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Tools Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="tools-content"><i class="fas fa-tools"></i>
+                            Tools</a>
+                        <div class="dropdown-content" id="tools-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-chart-line"></i> Health Tracking</h4>
+                                <a href="../pages/health_score.html">Health Score</a>
+                                <a href="../pages/habit_tracker.html">Habit Tracker</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-check-circle"></i> Assessments</h4>
+                                <a href="../pages/self_assessment.html">Self-Assessment</a>
+                                <a href="../pages/readiness_assessment.html">Readiness Test</a>
+                                <a href="../pages/personalized_plan.html">Personalized Plan</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Community Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="community-content"><i class="fas fa-users"></i>
+                            Community</a>
+                        <div class="dropdown-content" id="community-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-comments"></i> Engagement</h4>
+                                <a href="../pages/community_forum.html">Forum</a>
+                                <a href="../pages/events.html">Events</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-user-plus"></i> Participation</h4>
+                                <a href="../pages/expert_qa.html">Expert Q&A</a>
+                                <a href="../pages/join_community.html">Join Us</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Blog -->
+                    <li><a href="../pages/blog.html" class="active"><i class="fas fa-blog"></i> Blog</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="../pages/join_community.html" class="btn btn-primary">Join Now</a>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main class="page-content">
@@ -17,32 +100,189 @@
             <div class="content-container">
                 <div class="content-header">
                     <h1>Health & Wellness Blog</h1>
-                    <p>Latest articles and health tips</p>
+                    <p>Latest articles, research, and tips for your holistic health journey</p>
                 </div>
                 
                 <div class="blog-posts">
+                    <!-- Blog 1 -->
                     <div class="blog-card">
-                        <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Healthy Eating">
+                        <div class="blog-img">
+                            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Healthy Eating">
+                        </div>
                         <div class="blog-content">
-                            <h3>10 Tips for Healthier Eating Habits</h3>
+                            <h3>10 Science-Backed Tips for Healthier Eating Habits</h3>
+                            <p class="blog-excerpt">Discover simple yet powerful strategies to transform your relationship with food and develop sustainable healthy eating patterns...</p>
                             <div class="blog-meta">
-                                <span>By Dr. Sarah Johnson</span>
-                                <span>May 15, 2023</span>
+                                <span><i class="fas fa-user"></i> By Dr. Sarah Johnson</span>
+                                <span><i class="fas fa-calendar-alt"></i> May 15, 2023</span>
+                                <span><i class="fas fa-clock"></i> 8 min read</span>
                             </div>
+                            <a href="https://www.hri.org.au/health/your-health/nutrition/10-healthy-eating-habits-to-get-into" class="btn btn-outline">Read More</a>
                         </div>
                     </div>
-                    <!-- More blog posts -->
+                    
+                    <!-- Blog 2 -->
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Home Workout">
+                        </div>
+                        <div class="blog-content">
+                            <h3>The 15-Minute Home Workout That Actually Works</h3>
+                            <p class="blog-excerpt">No gym? No problem! This efficient full-body routine requires no equipment and can be done anywhere for maximum results...</p>
+                            <div class="blog-meta">
+                                <span><i class="fas fa-user"></i> By Fitness Coach Mike</span>
+                                <span><i class="fas fa-calendar-alt"></i> June 2, 2023</span>
+                                <span><i class="fas fa-clock"></i> 6 min read</span>
+                            </div>
+                            <a href="#" class="btn btn-outline">Read More</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog 3 -->
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Superfoods">
+                        </div>
+                        <div class="blog-content">
+                            <h3>7 Superfoods to Boost Your Immunity Naturally</h3>
+                            <p class="blog-excerpt">These nutrient-packed foods can strengthen your immune system and help protect against illness when incorporated into your regular diet...</p>
+                            <div class="blog-meta">
+                                <span><i class="fas fa-user"></i> By Nutritionist Priya</span>
+                                <span><i class="fas fa-calendar-alt"></i> June 18, 2023</span>
+                                <span><i class="fas fa-clock"></i> 10 min read</span>
+                            </div>
+                            <a href="#" class="btn btn-outline">Read More</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog 4 -->
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <img src="https://images.unsplash.com/photo-1506126279646-a697353d3166?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Meditation">
+                        </div>
+                        <div class="blog-content">
+                            <h3>Mindfulness Meditation: A Beginner's Guide to Stress Relief</h3>
+                            <p class="blog-excerpt">Learn how just 10 minutes of daily meditation can reduce anxiety, improve focus, and enhance your overall wellbeing with these simple techniques...</p>
+                            <div class="blog-meta">
+                                <span><i class="fas fa-user"></i> By Therapist David</span>
+                                <span><i class="fas fa-calendar-alt"></i> July 5, 2023</span>
+                                <span><i class="fas fa-clock"></i> 12 min read</span>
+                            </div>
+                            <a href="#" class="btn btn-outline">Read More</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog 5 -->
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <img src="https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sleep">
+                        </div>
+                        <div class="blog-content">
+                            <h3>The Science of Sleep: How to Optimize Your Rest for Better Health</h3>
+                            <p class="blog-excerpt">Discover evidence-based strategies to improve sleep quality, fall asleep faster, and wake up feeling refreshed and energized...</p>
+                            <div class="blog-meta">
+                                <span><i class="fas fa-user"></i> By Sleep Specialist Emma</span>
+                                <span><i class="fas fa-calendar-alt"></i> July 22, 2023</span>
+                                <span><i class="fas fa-clock"></i> 15 min read</span>
+                            </div>
+                            <a href="#" class="btn btn-outline">Read More</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog 6 -->
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <img src="https://images.unsplash.com/photo-1549060279-7e168fce7090?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Community">
+                        </div>
+                        <div class="blog-content">
+                            <h3>How Social Connections Impact Your Physical Health</h3>
+                            <p class="blog-excerpt">Research reveals how strong relationships and community involvement can lower stress, boost immunity, and even extend lifespan...</p>
+                            <div class="blog-meta">
+                                <span><i class="fas fa-user"></i> By Psychologist Dr. Lee</span>
+                                <span><i class="fas fa-calendar-alt"></i> August 8, 2023</span>
+                                <span><i class="fas fa-clock"></i> 9 min read</span>
+                            </div>
+                            <a href="#" class="btn btn-outline">Read More</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog 7 -->
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Habits">
+                        </div>
+                        <div class="blog-content">
+                            <h3>Building Healthy Habits That Actually Stick</h3>
+                            <p class="blog-excerpt">Learn the psychology behind habit formation and practical strategies to make positive changes that last beyond January resolutions...</p>
+                            <div class="blog-meta">
+                                <span><i class="fas fa-user"></i> By Behavioral Coach Alex</span>
+                                <span><i class="fas fa-calendar-alt"></i> August 25, 2023</span>
+                                <span><i class="fas fa-clock"></i> 11 min read</span>
+                            </div>
+                            <a href="#" class="btn btn-outline">Read More</a>
+                        </div>
+                    </div>
                 </div>
+                
+    
             </div>
         </div>
     </main>
 
     <footer>
-        <!-- Same footer as index.html -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>🏥💚Heal<span>space</span></h3>
+                    <p>Your trusted partner in health, wellness, and personal transformation since 2024.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/dipendra.bhatta.244268/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../pages/veganism.html">Veganism</a></li>
+                        <li><a href="../pages/workout_plans.html">Fitness</a></li>
+                        <li><a href="../pages/addiction_recovery.html">Recovery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../pages/health_score.html">Health Score</a></li>
+                        <li><a href="../pages/habit_tracker.html">Tracker</a></li>
+                        <li><a href="../pages/community_forum.html">Community</a></li>
+                        <li><a href="../pages/blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@healspace.com</li>
+                        <li><i class="fas fa-phone"></i> 9860038245</li>
+                        <li><i class="fas fa-map-marker-alt"></i>Miatidevi, Kathmandu</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 healspace. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="../pages/privacy_policy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="../js/main.js"></script>
     <script src="../js/analytics.js"></script>
-
 </body>
 </html>

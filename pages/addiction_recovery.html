@@ -3,40 +3,444 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Addiction Recovery | lbef Health</title>
+    <title>Addiction Recovery Support | HealSpace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/addiction_recovery.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <!-- Same header as index.html -->
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">🏥💚Heal<span>Space</span></a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    
+                    <!-- Educational Content Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="educational-content"><i
+                                class="fas fa-book"></i> Educational Content</a>
+                        <div class="dropdown-content" id="educational-content">
+                            <!-- Veganism Column -->
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-leaf"></i> Veganism</h4>
+                                <a href="../pages/veganism.html">Introduction <span class="badge">Popular</span></a>
+                                <a href="../pages/vegan_recipes.html">Recipes</a>
+                            </div>
+
+                            <!-- Fitness Column -->
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-running"></i> Fitness</h4>
+                                <a href="../pages/workout_plans.html">Plans <span class="badge">New</span></a>
+                            </div>
+
+                            <!-- Recovery Column -->
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-hands-helping"></i> Recovery</h4>
+                                <a href="../pages/addiction_recovery.html" class="active">Guide</a>
+                                <a href="../pages/recovery_resources.html">Resources</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Tools Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="tools-content"><i class="fas fa-tools"></i>
+                            Tools</a>
+                        <div class="dropdown-content" id="tools-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-chart-line"></i> Health Tracking</h4>
+                                <a href="../pages/health_score.html">Health Score</a>
+                                <a href="../pages/habit_tracker.html">Habit Tracker</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-check-circle"></i> Assessments</h4>
+                                <a href="../pages/self_assessment.html">Self-Assessment</a>
+                                <a href="../pages/readiness_assessment.html">Readiness Test</a>
+                                <a href="../pages/personalized_plan.html">Personalized Plan</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Community Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="community-content"><i class="fas fa-users"></i>
+                            Community</a>
+                        <div class="dropdown-content" id="community-content">
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-comments"></i> Engagement</h4>
+                                <a href="../pages/community_forum.html">Forum</a>
+                                <a href="../pages/events.html">Events</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4><i class="fas fa-user-plus"></i> Participation</h4>
+                                <a href="../pages/expert_qa.html">Expert Q&A</a>
+                                <a href="../pages/join_community.html">Join Us</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Blog -->
+                    <li><a href="../pages/blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="../pages/join_community.html" class="btn btn-primary">Join Now</a>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <main class="page-content">
+    <!-- Hero Section -->
+    <section class="recovery-hero">
         <div class="container">
-            <div class="content-container">
-                <div class="content-header">
-                    <h1>Addiction Recovery Support</h1>
-                    <p>Resources and community for your recovery journey</p>
-                </div>
-                
-                <div class="recovery-resources">
-                    <div class="recovery-card">
-                        <h3><i class="fas fa-book"></i> Recovery Guides</h3>
-                        <p>Comprehensive guides for various stages of recovery.</p>
+            <div class="hero-content">
+                <h1>Your Journey to Freedom Starts Here</h1>
+                <p>Discover compassionate support, evidence-based resources, and a caring community dedicated to helping you overcome addiction.</p>
+                <a href="../pages/join_community.html" class="btn btn-primary">Join Our Support Community</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Understanding Addiction -->
+    <section class="recovery-section">
+        <div class="container">
+            <h2 class="section-title">Understanding Addiction</h2>
+            <p class="section-subtitle">Knowledge is the first step toward recovery</p>
+            
+            <div class="content-card">
+                <div class="content-columns">
+                    <div class="content-col">
+                        <h3>What is Addiction?</h3>
+                        <p>Addiction is a complex condition characterized by compulsive substance use despite harmful consequences. It's considered a brain disorder because it involves functional changes to brain circuits involved in reward, stress, and self-control.</p>
+                        <p>Addiction is not a moral failing or lack of willpower - it's a chronic medical condition that requires comprehensive treatment and ongoing support.</p>
                     </div>
-                    <!-- More recovery cards -->
+                    <div class="content-col">
+                        <h3>Common Signs of Addiction</h3>
+                        <ul class="signs-list">
+                            <li><i class="fas fa-check-circle"></i> Inability to stop using despite wanting to</li>
+                            <li><i class="fas fa-check-circle"></i> Spending excessive time obtaining/using substances</li>
+                            <li><i class="fas fa-check-circle"></i> Neglecting responsibilities and relationships</li>
+                            <li><i class="fas fa-check-circle"></i> Withdrawal symptoms when not using</li>
+                            <li><i class="fas fa-check-circle"></i> Developing tolerance (needing more to achieve same effect)</li>
+                            <li><i class="fas fa-check-circle"></i> Continuing use despite knowing the harm</li>
+                        </ul>
+                        <a href="../pages/readiness_assessment.html" class="btn btn-outline">Take Self-Assessment</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
+    <!-- Recovery Journey -->
+    <section class="recovery-section light-bg">
+        <div class="container">
+            <h2 class="section-title">The Recovery Journey</h2>
+            <p class="section-subtitle">Each step brings you closer to lasting freedom and wellness</p>
+            
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Awareness</h3>
+                    <p>Recognizing patterns and understanding addiction</p>
+                    <a href="../pages/blog.html" class="step-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Detox & Withdrawal</h3>
+                    <p>Managing physical dependence safely</p>
+                    <a href="../pages/recovery_resources.html" class="step-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Behavioral Change</h3>
+                    <p>Developing new coping strategies</p>
+                    <a href="../pages/community_forum.html" class="step-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Growth & Maintenance</h3>
+                    <p>Building a sustainable sober lifestyle</p>
+                    <a href="../pages/personalized_plan.html" class="step-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Helping Others</h3>
+                    <p>Sharing your journey to support recovery</p>
+                    <a href="../pages/join_community.html" class="step-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coping Strategies -->
+    <section class="recovery-section">
+        <div class="container">
+            <h2 class="section-title">Healthy Coping Strategies</h2>
+            <p class="section-subtitle">Replace addictive behaviors with positive alternatives</p>
+            
+            <div class="coping-strategies">
+                <div class="strategy-card">
+                    <div class="strategy-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3>Physical Activity</h3>
+                    <p>Exercise releases endorphins that reduce cravings and improve mood</p>
+                    <a href="../pages/fitness.html" class="btn btn-small">Explore Workouts</a>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Mindfulness & Meditation</h3>
+                    <p>Develop awareness of triggers and build emotional resilience</p>
+                    <a href="../pages/blog.html" class="btn btn-small">Learn Techniques</a>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Nutrition</h3>
+                    <p>Healthy eating supports brain recovery and reduces cravings</p>
+                    <a href="../pages/vegan_recipes.html" class="btn btn-small">Find Recipes</a>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Creative Expression</h3>
+                    <p>Art, writing, and music provide healthy emotional outlets</p>
+                    <a href="../pages/events.html" class="btn btn-small">Join Workshops</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools & Resources -->
+    <section class="recovery-section light-bg">
+        <div class="container">
+            <h2 class="section-title">Tools & Resources</h2>
+            <p class="section-subtitle">Practical support for your recovery journey</p>
+            
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Sobriety Tracker</h3>
+                    <p>Monitor your progress and celebrate milestones</p>
+                    <a href="../pages/habit_tracker.html" class="btn btn-outline">Start Tracking</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Recovery Library</h3>
+                    <p>Evidence-based guides and educational materials</p>
+                    <a href="../pages/recovery_resources.html" class="btn btn-outline">Explore Resources</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Support Groups</h3>
+                    <p>Connect with others on similar journeys</p>
+                    <a href="../pages/community_forum.html" class="btn btn-outline">Find Community</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Professional Help</h3>
+                    <p>Connect with addiction specialists and counselors</p>
+                    <a href="../pages/expert_qa.html" class="btn btn-outline">Find Support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="recovery-section">
+        <div class="container">
+            <h2 class="section-title">Stories of Hope & Recovery</h2>
+            <p class="section-subtitle">Real people who have transformed their lives</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar">S</div>
+                        <div>
+                            <h3>Sarah K.</h3>
+                            <p>2 years sober</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"HealSpace gave me the tools and community I needed when I felt completely alone. The daily tracker helped me see my progress, and the support groups kept me accountable."</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar">M</div>
+                        <div>
+                            <h3>Michael T.</h3>
+                            <p>8 months sober</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"The relapse prevention resources were a game-changer for me. Learning to recognize my triggers and having a plan made all the difference in my recovery journey."</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar">P</div>
+                        <div>
+                            <h3>Priya R.</h3>
+                            <p>3 years sober</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"I never thought I could break free, but with the step-by-step guides and expert sessions, I found my path to recovery. Now I'm helping others do the same!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobriety Tracker -->
+    <section class="recovery-section light-bg">
+        <div class="container">
+            <div class="progress-container">
+                <div class="progress-info">
+                    <h2>Track Your Sobriety Journey</h2>
+                    <p>Celebrate every milestone in your recovery process</p>
+                    
+                    <div class="tracker-stats">
+                        <div class="stat">
+                            <div class="number" id="days-sober">0</div>
+                            <div class="label">Days Sober</div>
+                        </div>
+                        <div class="stat">
+                            <div class="number" id="money-saved">$0</div>
+                            <div class="label">Money Saved</div>
+                        </div>
+                        <div class="stat">
+                            <div class="number" id="health-improved">0%</div>
+                            <div class="label">Health Improved</div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary" id="add-day-btn">Add Another Day</button>
+                    <p class="small">Use our <a href="../pages/habit_tracker.html">Habit Tracker</a> for detailed monitoring</p>
+                </div>
+                
+                <div class="progress-visual">
+                    <div class="progress-circle">
+                        <div class="progress-bar"></div>
+                        <div class="progress-text">
+                            <span id="progress-percent">0%</span>
+                            <span>of 90 days</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="recovery-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Recovery Journey?</h2>
+                <p>Join thousands who have found freedom and support through our community</p>
+                <div class="cta-buttons">
+                    <a href="../pages/join_community.html" class="btn btn-primary">Join Support Community</a>
+                    <a href="../pages/readiness_assessment.html" class="btn btn-light">Take Readiness Test</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <!-- Same footer as index.html -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>🏥💚Heal<span>space</span></h3>
+                    <p>Your trusted partner in health, wellness, and personal transformation since 2024.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/dipendra.bhatta.244268/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../pages/veganism.html">Veganism</a></li>
+                        <li><a href="../pages/workout_plans.html">Fitness</a></li>
+                        <li><a href="../pages/addiction_recovery.html">Recovery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../pages/health_score.html">Health Score</a></li>
+                        <li><a href="../pages/habit_tracker.html">Tracker</a></li>
+                        <li><a href="../pages/community_forum.html">Community</a></li>
+                        <li><a href="../pages/blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@healspace.com</li>
+                        <li><i class="fas fa-phone"></i> 9860038245</li>
+                        <li><i class="fas fa-map-marker-alt"></i>Miatidevi, Kathmandu</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 healspace. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="../pages/privacy_policy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="../js/main.js"></script>
-    <script src="../js/analytics.js"></script>
-
+    <script src="../js/pages/addiction_recovery.js"></script>
 </body>
 </html>
