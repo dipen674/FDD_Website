@@ -1,0 +1,402 @@
+/* Addiction Recovery Page Styles */
+:root {
+    --primary: #2a9d8f;
+    --primary-dark: #238f82;
+    --secondary: #264653;
+    --accent: #e9c46a;
+    --light: #efeee1;
+    --dark: #060202;
+    --recovery-light: #f0f7f6;
+}
+
+/* Hero Section */
+.recovery-hero {
+    background: linear-gradient(rgba(38, 70, 83, 0.85), rgba(38, 70, 83, 0.9)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.recovery-hero .hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.recovery-hero .hero-content p {
+    font-size: 1.4rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+/* Recovery Sections */
+.recovery-section {
+    padding: 80px 0;
+}
+
+.recovery-section.light-bg {
+    background-color: var(--recovery-light);
+}
+
+.content-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 40px;
+}
+
+.content-columns {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.content-col {
+    flex: 1;
+    min-width: 300px;
+}
+
+.signs-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.signs-list li {
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.signs-list li i {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: var(--primary);
+}
+
+/* Steps Container */
+.steps-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.step-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    width: 220px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(42, 157, 143, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--primary);
+    font-size: 30px;
+}
+
+.step-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.step-link i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.step-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Coping Strategies */
+.coping-strategies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.strategy-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.strategy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.strategy-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(42, 157, 143, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--primary);
+    font-size: 24px;
+}
+
+.btn-small {
+    display: inline-block;
+    padding: 8px 20px;
+    background: white;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-small:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* Resources Grid */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.resource-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.resource-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+/* Testimonials */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: 15px;
+}
+
+.testimonial-content p {
+    color: #555;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+/* Progress Tracker */
+.progress-container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.progress-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.progress-visual {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.progress-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(var(--accent) 0%, transparent 0%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.progress-circle::before {
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    background: var(--recovery-light);
+    border-radius: 50%;
+}
+
+.progress-text {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.progress-text span:first-child {
+    font-size: 2.5rem;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.tracker-stats {
+    display: flex;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.stat {
+    text-align: center;
+}
+
+.number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+
+.label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* CTA Section */
+.recovery-cta {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn-light {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-light:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .recovery-hero .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .step-card {
+        width: 180px;
+        padding: 20px;
+    }
+    
+    .progress-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .tracker-stats {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .recovery-hero .hero-content h1 {
+        font-size: 2.3rem;
+    }
+    
+    .step-card {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
