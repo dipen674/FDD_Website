@@ -1,50 +1,5 @@
 /* Join Community Page Styles */
 
-/* Hero Section
-.join-hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 120px 0 80px;
-    color: white;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.join-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="white" stop-opacity=".1"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient></defs><circle cx="10" cy="10" r="2" fill="url(%23a)"/><circle cx="30" cy="15" r="1" fill="url(%23a)"/><circle cx="50" cy="5" r="1.5" fill="url(%23a)"/><circle cx="70" cy="12" r="1" fill="url(%23a)"/><circle cx="90" cy="8" r="2" fill="url(%23a)"/></svg>');
-    opacity: 0.5;
-    animation: float 20s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-}
-
-.join-hero h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    background: linear-gradient(45deg, #fff, #f0f8ff);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-}
-
-.join-hero p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    line-height: 1.6;
-} */
 
 /* Main Content */
 .join-main {
