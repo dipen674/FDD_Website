@@ -161,11 +161,6 @@
     color: var(--light);
 }
 
-.btn-outline {
-    background: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
-}
 
 .btn:hover {
     transform: translateY(-3px);
