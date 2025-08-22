@@ -1,4 +1,4 @@
-// Readiness Assessment Quiz JavaScript
+// Readiness Assessment Quiz JavaScript - Debug Version
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('readinessAssessment');
@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentQuestion = 1;
     const totalQuestions = 15;
     let answers = {};
+
+    // Debug: Check if all questions are found
+    console.log('Total question cards found:', questionCards.length);
+    questionCards.forEach((card, index) => {
+        console.log(`Question ${index + 1}:`, card.dataset.question, card.querySelector('h3')?.textContent);
+    });
 
     // Initialize the assessment
     init();
@@ -35,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
             radioButtons.forEach(radio => {
                 radio.addEventListener('change', function() {
                     answers[`q${index + 1}`] = parseInt(this.value);
+                    console.log('Answer recorded:', `q${index + 1}`, this.value);
                     updateNavigation();
                 });
             });
@@ -42,13 +49,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function showQuestion(questionNum) {
-        questionCards.forEach(card => {
+        console.log('Showing question:', questionNum);
+        
+        questionCards.forEach((card, index) => {
             card.classList.remove('active');
             if (parseInt(card.dataset.question) === questionNum) {
                 card.classList.add('active');
+                console.log('Activated question card:', index + 1, card.querySelector('h3')?.textContent);
             }
         });
         currentQuestion = questionNum;
+        
+        // Debug: Check if question is visible
+        const activeCard = document.querySelector('.question-card.active');
+        if (activeCard) {
+            console.log('Active card found:', activeCard.querySelector('h3')?.textContent);
+        } else {
+            console.log('No active card found!');
+        }
     }
 
     function nextQuestion() {
@@ -105,6 +123,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const currentAnswer = answers[`q${currentQuestion}`];
             nextBtn.disabled = !currentAnswer;
         }
+        
+        console.log('Navigation updated. Current answers:', answers);
     }
 
     function calculateResults(e) {
@@ -231,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Scroll to results
         resultsContainer.scrollIntoView({ behavior: 'smooth' });
         
-        // Store results in local storage for potential use in personalized plan
+        // Store results in memory for potential use in personalized plan
         try {
             const resultsData = {
                 score: percentageScore,
@@ -239,7 +259,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 timestamp: new Date().toISOString(),
                 answers: answers
             };
-            // Note: Using in-memory storage since localStorage is not supported
             window.readinessResults = resultsData;
         } catch (error) {
             console.log('Results stored in memory for this session');
