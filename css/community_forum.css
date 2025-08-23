@@ -294,24 +294,6 @@
     align-items: center;
     gap: 10px;
 }
-/* 
-.sort-btn {
-    background: transparent;
-    border: 1px solid #ddd;
-    padding: 8px 15px;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: var(--transition);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.sort-btn:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-} */
 
 .discussion-list {
     display: flex;
@@ -402,34 +384,6 @@
     align-items: center;
     gap: 5px;
 }
-
-/* .pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    gap: 8px;
-}
-
-.pagination button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid #ddd;
-    background: white;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.pagination button.active {
-    background: var(--primary);
-    color: white;
-    border-color: var(--primary);
-}
-
-.pagination button:hover:not(.active) {
-    background: #f0f0f0;
-} */
 
 /* Modal Styles */
 .modal {
