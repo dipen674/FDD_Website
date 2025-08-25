@@ -1,19 +1,8 @@
 :root {
-    --primary: #2a9d8f;
-    --primary-dark: #238f82;
-    --secondary: #264653;
-    --accent: #e9c46a;
-    --light: #efeee1;
-    --dark: #060202;
-    --transition: all 0.3s ease;
-    --shadow: 0 5px 15px rgba(0,0,0,0.1);
-    --shadow-hover: 0 10px 25px rgba(0,0,0,0.15);
-    --radius: 10px;
     --primary-color: #28a745;
     --text-color: #333;
     --bg-light: #f8f9fa;
 }
-
 
 * {
     margin: 0;
