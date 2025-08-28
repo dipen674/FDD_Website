@@ -1,7 +1,4 @@
 /* Workout Plans Section */
-.workout-plans {
-    background: var(--light);
-}
 
 .plan-filters {
     display: flex;
