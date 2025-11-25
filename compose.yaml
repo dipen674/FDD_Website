@@ -1,0 +1,11 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    container_name: fdd_web_app
+    volumes:
+      - ./:/usr/share/nginx/html
